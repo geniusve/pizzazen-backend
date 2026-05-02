@@ -411,7 +411,7 @@ INSERT INTO ingredienti_default (descrizione, prezzo, allergeni) VALUES
 -- Password: Admin2025!
 INSERT INTO admin_globali (username, password_hash, nome, email) VALUES (
     'admin',
-    '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQyCgz5N.CbzGjE2QwE.gU7Fy',
+    '$2b$12$SpnxHx6jcgS7d6zW7vSrZeMHB6FDcb13AOiJ9pEBtcrN4D5hekuW.',
     'Super Admin',
     'admin@pizzazen.it'
 );
