@@ -4,11 +4,11 @@ const router = require('express').Router();
 // man mano che sviluppiamo il backend
 
 router.use('/auth',    require('./auth'));
+router.use('/admin',  require('./admin/index'));
 
 // Placeholder — verranno aggiunte nelle prossime sessioni
-// router.use('/admin',   require('./admin'));
-// router.use('/pizzeria', require('./pizzeria'));
+// router.use('/pizzeria',   require('./pizzeria/index'));
 // router.use('/self-order', require('./selfOrder'));
-// router.use('/tracking', require('./tracking'));
+// router.use('/tracking',   require('./tracking'));
 
 module.exports = router;
