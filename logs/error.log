@@ -1,0 +1,16 @@
+2026-05-02 16:08:12 [ERROR] Redis error:
+2026-05-02 16:08:12 [ERROR] Redis error:
+2026-05-02 16:08:12 [ERROR] Redis error:
+2026-05-02 16:08:12 [ERROR] Errore pool PostgreSQL: terminating connection due to administrator command
+error: terminating connection due to administrator command
+    at parseErrorMessage (/opt/pizzazen-backend/node_modules/pg-protocol/src/parser.ts:394:9)
+    at Parser.handlePacket (/opt/pizzazen-backend/node_modules/pg-protocol/src/parser.ts:212:19)
+    at Parser.parse (/opt/pizzazen-backend/node_modules/pg-protocol/src/parser.ts:105:30)
+    at Socket.<anonymous> (/opt/pizzazen-backend/node_modules/pg-protocol/src/index.ts:7:48)
+    at Socket.emit (node:events:524:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:191:23)
+2026-05-02 16:08:12 [ERROR] Redis error:
+2026-05-02 16:08:12 [ERROR] Redis error:

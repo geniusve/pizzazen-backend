@@ -43,3 +43,192 @@
 2026-05-02 15:58:14 [INFO] 🌍 Ambiente: development
 2026-05-02 15:58:14 [INFO] 📡 Health check: http://localhost:3000/health
 2026-05-02 15:58:14 [INFO] 🔌 Socket.io attivo
+2026-05-02 16:01:27 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:01:27 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:01:27 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:01:27 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:01:27 [INFO] ✅ Redis connesso
+2026-05-02 16:01:31 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:01:31 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:01:31 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:01:31 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:01:31 [INFO] ✅ Redis connesso
+2026-05-02 16:01:35 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:01:35 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:01:35 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:01:35 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:01:35 [INFO] ✅ Redis connesso
+2026-05-02 16:01:38 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:01:38 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:01:39 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:01:39 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:01:39 [INFO] ✅ Redis connesso
+2026-05-02 16:01:42 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:01:42 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:01:42 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:01:42 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:01:42 [INFO] ✅ Redis connesso
+2026-05-02 16:01:46 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:01:46 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:01:46 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:01:46 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:01:46 [INFO] ✅ Redis connesso
+2026-05-02 16:01:50 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:01:50 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:01:50 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:01:50 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:01:50 [INFO] ✅ Redis connesso
+2026-05-02 16:01:54 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:01:54 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:01:54 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:01:54 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:01:54 [INFO] ✅ Redis connesso
+2026-05-02 16:01:58 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:01:58 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:01:58 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:01:58 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:01:58 [INFO] ✅ Redis connesso
+2026-05-02 16:02:02 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:02:02 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:02:02 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:02:02 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:02:02 [INFO] ✅ Redis connesso
+2026-05-02 16:02:06 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:02:06 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:02:06 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:02:06 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:02:06 [INFO] ✅ Redis connesso
+2026-05-02 16:02:10 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:02:10 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:02:10 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:02:10 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:02:10 [INFO] ✅ Redis connesso
+2026-05-02 16:02:14 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:02:14 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:02:14 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:02:14 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:02:14 [INFO] ✅ Redis connesso
+2026-05-02 16:02:17 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:02:17 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:02:17 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:02:17 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:02:17 [INFO] ✅ Redis connesso
+2026-05-02 16:02:21 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:02:21 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:02:21 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:02:21 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:02:21 [INFO] ✅ Redis connesso
+2026-05-02 16:02:25 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:02:25 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:02:25 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:02:25 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:02:25 [INFO] ✅ Redis connesso
+2026-05-02 16:02:29 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:02:29 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:02:29 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:02:29 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:02:29 [INFO] ✅ Redis connesso
+2026-05-02 16:02:33 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:02:33 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:02:33 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:02:33 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:02:33 [INFO] ✅ Redis connesso
+2026-05-02 16:02:37 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:02:37 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:02:37 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:02:37 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:02:37 [INFO] ✅ Redis connesso
+2026-05-02 16:02:41 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:02:41 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:02:41 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:02:41 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:02:41 [INFO] ✅ Redis connesso
+2026-05-02 16:02:45 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:02:45 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:02:45 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:02:45 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:02:45 [INFO] ✅ Redis connesso
+2026-05-02 16:02:49 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:02:49 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:02:49 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:02:49 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:02:49 [INFO] ✅ Redis connesso
+2026-05-02 16:02:53 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:02:53 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:02:53 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:02:53 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:02:53 [INFO] ✅ Redis connesso
+2026-05-02 16:02:56 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:02:56 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:02:56 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:02:56 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:02:56 [INFO] ✅ Redis connesso
+2026-05-02 16:03:00 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:03:00 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:03:00 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:03:00 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:03:00 [INFO] ✅ Redis connesso
+2026-05-02 16:03:04 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:03:04 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:03:04 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:03:04 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:03:04 [INFO] ✅ Redis connesso
+2026-05-02 16:03:08 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:03:08 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:03:08 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:03:08 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:03:08 [INFO] ✅ Redis connesso
+2026-05-02 16:03:12 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:03:12 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:03:12 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:03:12 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:03:12 [INFO] ✅ Redis connesso
+2026-05-02 16:03:16 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:03:16 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:03:16 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:03:16 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:03:16 [INFO] ✅ Redis connesso
+2026-05-02 16:03:20 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:03:20 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:03:20 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:03:20 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:03:20 [INFO] ✅ Redis connesso
+2026-05-02 16:03:24 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:03:24 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:03:24 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:03:24 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:03:24 [INFO] ✅ Redis connesso
+2026-05-02 16:03:28 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:03:28 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:03:28 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:03:28 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:03:28 [INFO] ✅ Redis connesso
+2026-05-02 16:03:32 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:03:32 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:03:32 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:03:32 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:03:32 [INFO] ✅ Redis connesso
+2026-05-02 16:03:36 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:03:36 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:03:36 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:03:36 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:03:36 [INFO] ✅ Redis connesso
+2026-05-02 16:03:40 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:03:40 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:03:40 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:03:40 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:03:40 [INFO] ✅ Redis connesso
+2026-05-02 16:03:43 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:03:43 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:03:44 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:03:44 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:03:44 [INFO] ✅ Redis connesso
+2026-05-02 16:04:22 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:04:22 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:04:22 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:04:22 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:04:22 [INFO] ✅ Redis connesso
+2026-05-02 16:04:22 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-02 16:04:22 [INFO] 🌍 Ambiente: production
+2026-05-02 16:04:22 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-02 16:04:22 [INFO] 🔌 Socket.io attivo
+2026-05-02 16:07:25 [INFO] SIGTERM ricevuto — spegnimento graceful...
+2026-05-02 16:07:47 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:07:47 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:07:48 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:07:48 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:07:48 [INFO] ✅ Redis connesso
+2026-05-02 16:07:48 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-02 16:07:48 [INFO] 🌍 Ambiente: production
+2026-05-02 16:07:48 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-02 16:07:48 [INFO] 🔌 Socket.io attivo
+2026-05-02 16:08:12 [ERROR] Redis error:
+2026-05-02 16:08:12 [WARN] Redis: riconnessione...
+2026-05-02 16:08:12 [ERROR] Redis error:
+2026-05-02 16:08:12 [WARN] Redis: riconnessione...
+2026-05-02 16:08:12 [ERROR] Redis error:
+2026-05-02 16:08:12 [ERROR] Errore pool PostgreSQL: terminating connection due to administrator command
+error: terminating connection due to administrator command
+    at parseErrorMessage (/opt/pizzazen-backend/node_modules/pg-protocol/src/parser.ts:394:9)
+    at Parser.handlePacket (/opt/pizzazen-backend/node_modules/pg-protocol/src/parser.ts:212:19)
+    at Parser.parse (/opt/pizzazen-backend/node_modules/pg-protocol/src/parser.ts:105:30)
+    at Socket.<anonymous> (/opt/pizzazen-backend/node_modules/pg-protocol/src/index.ts:7:48)
+    at Socket.emit (node:events:524:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:191:23)
+2026-05-02 16:08:12 [WARN] Redis: riconnessione...
+2026-05-02 16:08:12 [ERROR] Redis error:
+2026-05-02 16:08:12 [WARN] Redis: riconnessione...
+2026-05-02 16:08:12 [ERROR] Redis error:
+2026-05-02 16:08:33 [INFO] ✅ Socket.io inizializzato
+2026-05-02 16:08:33 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 16:08:33 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 16:08:33 GMT+0000 (Coordinated Universal Time)
+2026-05-02 16:08:33 [INFO] ✅ Redis connesso
+2026-05-02 16:08:33 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-02 16:08:33 [INFO] 🌍 Ambiente: production
+2026-05-02 16:08:33 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-02 16:08:33 [INFO] 🔌 Socket.io attivo
