@@ -1,0 +1,8 @@
+2026-05-02 15:26:21 [INFO] ✅ Socket.io inizializzato
+2026-05-02 15:26:21 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 15:26:21 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 15:26:21 GMT+0000 (Coordinated Universal Time)
+2026-05-02 15:26:21 [INFO] ✅ Redis connesso
+2026-05-02 15:26:21 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-02 15:26:21 [INFO] 🌍 Ambiente: development
+2026-05-02 15:26:21 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-02 15:26:21 [INFO] 🔌 Socket.io attivo

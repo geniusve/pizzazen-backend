@@ -1,6 +1,5 @@
 -- ═══════════════════════════════════════════════════════════════════════════
 -- PIZZAZEN — Schema Database Completo v1.0
--- Migrazione: 001_schema_iniziale.sql
 -- ═══════════════════════════════════════════════════════════════════════════
 
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
@@ -62,8 +61,7 @@ CREATE TABLE orari_straordinari (
         (tipo = 'apertura' AND ora_apertura IS NOT NULL
             AND ora_chiusura IS NOT NULL
             AND ora_apertura < ora_chiusura)
-    ),
-    UNIQUE (pizzeria_id, data, COALESCE(ora_apertura, '00:00'::TIME))
+    )
 );
 
 -- ══ UTENTI ════════════════════════════════════════════════════════════════
@@ -309,15 +307,15 @@ ALTER TABLE slot_disponibili      ENABLE ROW LEVEL SECURITY;
 ALTER TABLE ordini                ENABLE ROW LEVEL SECURITY;
 ALTER TABLE ordine_articoli       ENABLE ROW LEVEL SECURITY;
 
-CREATE POLICY rls_utenti         ON utenti          USING (pizzeria_id = NULLIF(current_setting('app.pizzeria_id', true), '')::int);
-CREATE POLICY rls_orari_sett     ON orari_settimanali USING (pizzeria_id = NULLIF(current_setting('app.pizzeria_id', true), '')::int);
-CREATE POLICY rls_orari_straord  ON orari_straordinari USING (pizzeria_id = NULLIF(current_setting('app.pizzeria_id', true), '')::int);
-CREATE POLICY rls_ingredienti    ON ingredienti       USING (pizzeria_id = NULLIF(current_setting('app.pizzeria_id', true), '')::int);
-CREATE POLICY rls_categorie      ON categorie_menu    USING (pizzeria_id = NULLIF(current_setting('app.pizzeria_id', true), '')::int);
-CREATE POLICY rls_menu           ON menu_articoli     USING (pizzeria_id = NULLIF(current_setting('app.pizzeria_id', true), '')::int);
-CREATE POLICY rls_slot           ON slot_disponibili  USING (pizzeria_id = NULLIF(current_setting('app.pizzeria_id', true), '')::int);
-CREATE POLICY rls_ordini         ON ordini            USING (pizzeria_id = NULLIF(current_setting('app.pizzeria_id', true), '')::int);
-CREATE POLICY rls_ord_articoli   ON ordine_articoli   USING (pizzeria_id = NULLIF(current_setting('app.pizzeria_id', true), '')::int);
+CREATE POLICY rls_utenti        ON utenti             USING (pizzeria_id = NULLIF(current_setting('app.pizzeria_id', true), '')::int);
+CREATE POLICY rls_orari_sett    ON orari_settimanali  USING (pizzeria_id = NULLIF(current_setting('app.pizzeria_id', true), '')::int);
+CREATE POLICY rls_orari_straord ON orari_straordinari USING (pizzeria_id = NULLIF(current_setting('app.pizzeria_id', true), '')::int);
+CREATE POLICY rls_ingredienti   ON ingredienti        USING (pizzeria_id = NULLIF(current_setting('app.pizzeria_id', true), '')::int);
+CREATE POLICY rls_categorie     ON categorie_menu     USING (pizzeria_id = NULLIF(current_setting('app.pizzeria_id', true), '')::int);
+CREATE POLICY rls_menu          ON menu_articoli      USING (pizzeria_id = NULLIF(current_setting('app.pizzeria_id', true), '')::int);
+CREATE POLICY rls_slot          ON slot_disponibili   USING (pizzeria_id = NULLIF(current_setting('app.pizzeria_id', true), '')::int);
+CREATE POLICY rls_ordini        ON ordini             USING (pizzeria_id = NULLIF(current_setting('app.pizzeria_id', true), '')::int);
+CREATE POLICY rls_ord_articoli  ON ordine_articoli    USING (pizzeria_id = NULLIF(current_setting('app.pizzeria_id', true), '')::int);
 
 -- ══ FUNZIONI ═════════════════════════════════════════════════════════════
 
@@ -338,18 +336,18 @@ RETURNS TEXT[] AS $$
 DECLARE v_allergeni TEXT[];
 BEGIN
     SELECT ARRAY(
-        SELECT DISTINCT unnest
+        SELECT DISTINCT u
         FROM (
-            SELECT unnest(i.allergeni)
+            SELECT unnest(i.allergeni) AS u
             FROM menu_articoli_ingredienti mai
             JOIN ingredienti i ON i.id = mai.ingrediente_id
             WHERE mai.articolo_id = p_articolo_id
             UNION
-            SELECT unnest(ma.allergeni_extra)
+            SELECT unnest(ma.allergeni_extra) AS u
             FROM menu_articoli ma
             WHERE ma.id = p_articolo_id
-        ) t(unnest)
-        WHERE unnest IS NOT NULL AND unnest != ''
+        ) t
+        WHERE u IS NOT NULL AND u != ''
     ) INTO v_allergeni;
     RETURN COALESCE(v_allergeni, '{}');
 END;
@@ -360,12 +358,12 @@ RETURNS TRIGGER AS $$
 BEGIN NEW.updated_at = NOW(); RETURN NEW; END;
 $$ LANGUAGE plpgsql;
 
-CREATE TRIGGER trg_pizzerie_upd   BEFORE UPDATE ON pizzerie      FOR EACH ROW EXECUTE FUNCTION update_updated_at();
-CREATE TRIGGER trg_menu_upd       BEFORE UPDATE ON menu_articoli FOR EACH ROW EXECUTE FUNCTION update_updated_at();
-CREATE TRIGGER trg_ordini_upd     BEFORE UPDATE ON ordini        FOR EACH ROW EXECUTE FUNCTION update_updated_at();
-CREATE TRIGGER trg_clienti_upd    BEFORE UPDATE ON clienti       FOR EACH ROW EXECUTE FUNCTION update_updated_at();
+CREATE TRIGGER trg_pizzerie_upd  BEFORE UPDATE ON pizzerie      FOR EACH ROW EXECUTE FUNCTION update_updated_at();
+CREATE TRIGGER trg_menu_upd      BEFORE UPDATE ON menu_articoli FOR EACH ROW EXECUTE FUNCTION update_updated_at();
+CREATE TRIGGER trg_ordini_upd    BEFORE UPDATE ON ordini        FOR EACH ROW EXECUTE FUNCTION update_updated_at();
+CREATE TRIGGER trg_clienti_upd   BEFORE UPDATE ON clienti       FOR EACH ROW EXECUTE FUNCTION update_updated_at();
 
--- ══ DATI INIZIALI — Ingredienti default ══════════════════════════════════
+-- ══ INGREDIENTI DEFAULT ═══════════════════════════════════════════════════
 
 INSERT INTO ingredienti_default (descrizione, prezzo, allergeni) VALUES
 ('Pomodoro',             0.00, '{}'),
@@ -409,8 +407,8 @@ INSERT INTO ingredienti_default (descrizione, prezzo, allergeni) VALUES
 ('Uovo',                 0.50, '{uova}'),
 ('Olio EVO',             0.00, '{}');
 
--- ══ ADMIN GLOBALE di default (cambia la password subito!) ═════════════════
--- Password di default: Admin2025! (hashata con bcrypt rounds=12)
+-- ══ ADMIN GLOBALE DEFAULT (cambia la password subito!) ════════════════════
+-- Password: Admin2025!
 INSERT INTO admin_globali (username, password_hash, nome, email) VALUES (
     'admin',
     '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQyCgz5N.CbzGjE2QwE.gU7Fy',
