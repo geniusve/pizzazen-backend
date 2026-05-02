@@ -1,0 +1,35 @@
+{
+  "name": "pizzazen-backend",
+  "version": "1.0.0",
+  "description": "PizzaZen - Sistema gestione ordini pizzerie",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "migrate": "node migrations/run.js",
+    "test": "echo \"No test yet\""
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.3.1",
+    "express-validator": "^7.1.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "node-cron": "^3.0.3",
+    "pg": "^8.12.0",
+    "redis": "^4.6.14",
+    "sharp": "^0.33.4",
+    "socket.io": "^4.7.5",
+    "uuid": "^10.0.0",
+    "whatsapp-web.js": "^1.23.0",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
