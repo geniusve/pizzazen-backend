@@ -26,3 +26,20 @@
 2026-05-02 15:50:52 [INFO] 🌍 Ambiente: development
 2026-05-02 15:50:52 [INFO] 📡 Health check: http://localhost:3000/health
 2026-05-02 15:50:52 [INFO] 🔌 Socket.io attivo
+2026-05-02 15:56:35 [INFO] ✅ Pizzeria creata: Pizzeria Da Mario (id: 1)
+2026-05-02 15:57:53 [INFO] ✅ Socket.io inizializzato
+2026-05-02 15:57:53 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 15:57:53 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 15:57:53 GMT+0000 (Coordinated Universal Time)
+2026-05-02 15:57:53 [INFO] ✅ Redis connesso
+2026-05-02 15:57:53 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-02 15:57:53 [INFO] 🌍 Ambiente: development
+2026-05-02 15:57:53 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-02 15:57:53 [INFO] 🔌 Socket.io attivo
+2026-05-02 15:58:13 [INFO] ✅ Socket.io inizializzato
+2026-05-02 15:58:14 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-02 15:58:14 [INFO] ✅ PostgreSQL connesso — Sat May 02 2026 15:58:14 GMT+0000 (Coordinated Universal Time)
+2026-05-02 15:58:14 [INFO] ✅ Redis connesso
+2026-05-02 15:58:14 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-02 15:58:14 [INFO] 🌍 Ambiente: development
+2026-05-02 15:58:14 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-02 15:58:14 [INFO] 🔌 Socket.io attivo

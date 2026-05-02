@@ -1,13 +1,12 @@
 const router = require('express').Router();
 const { authMiddleware, requireAdmin } = require('../../middleware/auth');
 
-// Tutte le route /admin richiedono autenticazione come admin globale
 router.use(authMiddleware);
 router.use(requireAdmin);
 
-// Sub-routes
-router.use('/pizzerie',              require('./pizzerie'));
-router.use('/pizzerie/:pizzeriaId/utenti', require('./utenti'));
-router.use('/ingredienti',           require('./ingredienti'));
+router.use('/pizzerie', require('./pizzerie'));
+router.use('/ingredienti', require('./ingredienti'));
 
+// Utenti montati separatamente con mergeParams sul router principale
 module.exports = router;
+module.exports.utenteRouter = require('./utenti');
