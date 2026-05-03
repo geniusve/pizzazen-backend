@@ -1,5 +1,10 @@
-const { Pool } = require('pg');
+const { Pool, types } = require('pg');
 const logger = require('../utils/logger');
+
+// Fix timezone: pg restituisce date come stringhe senza conversione UTC
+types.setTypeParser(1082, val => val);   // DATE → 'YYYY-MM-DD'
+types.setTypeParser(1114, val => val);   // TIMESTAMP
+types.setTypeParser(1184, val => val);   // TIMESTAMPTZ
 
 const pool = new Pool({
   host:     process.env.DB_HOST     || 'localhost',
