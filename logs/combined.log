@@ -240,3 +240,30 @@ error: terminating connection due to administrator command
 2026-05-03 08:24:21 [INFO] 🌍 Ambiente: production
 2026-05-03 08:24:21 [INFO] 📡 Health check: http://localhost:3000/health
 2026-05-03 08:24:21 [INFO] 🔌 Socket.io attivo
+2026-05-03 20:21:54 [INFO] ✅ Socket.io inizializzato
+2026-05-03 20:21:54 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-03 20:21:54 [INFO] ✅ PostgreSQL connesso — Sun May 03 2026 20:21:54 GMT+0200 (Central European Summer Time)
+2026-05-03 20:21:54 [INFO] ✅ Redis connesso
+2026-05-03 20:21:54 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-03 20:21:54 [INFO] 🌍 Ambiente: production
+2026-05-03 20:21:54 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-03 20:21:54 [INFO] 🔌 Socket.io attivo
+2026-05-03 20:22:34 [INFO] ✅ Ordine #1 creato — pizzeria 1 — €16.00
+2026-05-03 20:29:32 [INFO] ✅ Socket.io inizializzato
+2026-05-03 20:29:32 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-03 20:29:32 [INFO] ✅ PostgreSQL connesso — Sun May 03 2026 20:29:32 GMT+0200 (Central European Summer Time)
+2026-05-03 20:29:32 [INFO] ✅ Redis connesso
+2026-05-03 20:29:32 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-03 20:29:32 [INFO] 🌍 Ambiente: production
+2026-05-03 20:29:32 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-03 20:29:32 [INFO] 🔌 Socket.io attivo
+2026-05-03 20:29:43 [INFO] ✅ Ordine #2 creato — pizzeria 1 — €8.00
+2026-05-03 20:31:46 [INFO] ✅ Socket.io inizializzato
+2026-05-03 20:31:46 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-03 20:31:46 [INFO] ✅ PostgreSQL connesso — Sun May 03 2026 20:31:46 GMT+0200 (Central European Summer Time)
+2026-05-03 20:31:46 [INFO] ✅ Redis connesso
+2026-05-03 20:31:46 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-03 20:31:46 [INFO] 🌍 Ambiente: production
+2026-05-03 20:31:46 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-03 20:31:46 [INFO] 🔌 Socket.io attivo
+2026-05-03 20:31:47 [INFO] ✅ Ordine #3 creato — pizzeria 1 — €8.00

@@ -1,4 +1,8 @@
-// Carica variabili d'ambiente PRIMA di tutto il resto
+// Imposta timezone PRIMA di tutto - deve essere la prima istruzione
+process.env.TZ = 'Europe/Rome';
+
+// Carica variabili d'ambiente
+require('dotenv').config();
 require('dotenv').config();
 
 const express       = require('express');

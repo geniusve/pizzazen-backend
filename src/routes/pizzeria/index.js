@@ -9,6 +9,7 @@ router.use('/ingredienti', require('./ingredienti'));
 router.use('/menu',        require('./menu'));
 router.use('/clienti',     require('./clienti'));
 router.use('/slot',        require('./slot'));
+router.use('/ordini',      require('./ordini'));
 router.use('/stats',       require('./stats'));
 
 module.exports = router;

@@ -6,9 +6,9 @@ const router = require('express').Router();
 router.use('/auth',     require('./auth'));
 router.use('/admin',    require('./admin/index'));
 router.use('/pizzeria', require('./pizzeria/index'));
+router.use('/tracking', require('./tracking'));
 
 // Placeholder
 // router.use('/self-order', require('./selfOrder'));
-// router.use('/tracking',   require('./tracking'));
 
 module.exports = router;

@@ -199,3 +199,37 @@
 2026-05-03 08:33:00: 127.0.0.1 - - [03/May/2026:08:33:00 +0000] "GET /api/v1/pizzeria/ingredienti HTTP/1.1" 200 5622 "-" "curl/7.81.0"
 2026-05-03 08:33:38: 127.0.0.1 - - [03/May/2026:08:33:38 +0000] "PUT /api/v1/pizzeria/orari/settimanali HTTP/1.1" 200 54 "-" "curl/7.81.0"
 2026-05-03 08:33:38: 127.0.0.1 - - [03/May/2026:08:33:38 +0000] "GET /api/v1/pizzeria/slot/2026-05-03 HTTP/1.1" 200 5608 "-" "curl/7.81.0"
+2026-05-03 18:21:54: 2026-05-03 20:21:54 [32minfo[39m: ✅ Socket.io inizializzato
+2026-05-03 18:21:54: 2026-05-03 20:21:54 [32minfo[39m: 🍕 Avvio PizzaZen Backend...
+2026-05-03 18:21:54: 2026-05-03 20:21:54 [32minfo[39m: ✅ PostgreSQL connesso — Sun May 03 2026 20:21:54 GMT+0200 (Central European Summer Time)
+2026-05-03 18:21:54: 2026-05-03 20:21:54 [32minfo[39m: ✅ Redis connesso
+2026-05-03 18:21:54: 2026-05-03 20:21:54 [32minfo[39m: ✅ Server in ascolto su porta 3000
+2026-05-03 18:21:54: 2026-05-03 20:21:54 [32minfo[39m: 🌍 Ambiente: production
+2026-05-03 18:21:54: 2026-05-03 20:21:54 [32minfo[39m: 📡 Health check: http://localhost:3000/health
+2026-05-03 18:21:54: 2026-05-03 20:21:54 [32minfo[39m: 🔌 Socket.io attivo
+2026-05-03 18:22:34: 127.0.0.1 - - [03/May/2026:18:22:34 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 421 "-" "curl/7.81.0"
+2026-05-03 18:22:34: 2026-05-03 20:22:34 [32minfo[39m: ✅ Ordine #1 creato — pizzeria 1 — €16.00
+2026-05-03 18:22:34: 127.0.0.1 - - [03/May/2026:18:22:34 +0000] "POST /api/v1/pizzeria/ordini HTTP/1.1" 201 833 "-" "curl/7.81.0"
+2026-05-03 18:23:17: 127.0.0.1 - - [03/May/2026:18:23:17 +0000] "GET /api/v1/tracking/144f2fa6-9df5-4681-9516-bc072d80a008 HTTP/1.1" 200 563 "-" "curl/7.81.0"
+2026-05-03 18:23:37: 127.0.0.1 - - [03/May/2026:18:23:37 +0000] "PATCH /api/v1/pizzeria/ordini/1/stato HTTP/1.1" 200 237 "-" "curl/7.81.0"
+2026-05-03 18:29:32: 2026-05-03 20:29:32 [32minfo[39m: ✅ Socket.io inizializzato
+2026-05-03 18:29:32: 2026-05-03 20:29:32 [32minfo[39m: 🍕 Avvio PizzaZen Backend...
+2026-05-03 18:29:32: 2026-05-03 20:29:32 [32minfo[39m: ✅ PostgreSQL connesso — Sun May 03 2026 20:29:32 GMT+0200 (Central European Summer Time)
+2026-05-03 18:29:32: 2026-05-03 20:29:32 [32minfo[39m: ✅ Redis connesso
+2026-05-03 18:29:32: 2026-05-03 20:29:32 [32minfo[39m: ✅ Server in ascolto su porta 3000
+2026-05-03 18:29:32: 2026-05-03 20:29:32 [32minfo[39m: 🌍 Ambiente: production
+2026-05-03 18:29:32: 2026-05-03 20:29:32 [32minfo[39m: 📡 Health check: http://localhost:3000/health
+2026-05-03 18:29:32: 2026-05-03 20:29:32 [32minfo[39m: 🔌 Socket.io attivo
+2026-05-03 18:29:43: 2026-05-03 20:29:43 [32minfo[39m: ✅ Ordine #2 creato — pizzeria 1 — €8.00
+2026-05-03 18:29:43: 127.0.0.1 - - [03/May/2026:18:29:43 +0000] "POST /api/v1/pizzeria/ordini HTTP/1.1" 201 790 "-" "curl/7.81.0"
+2026-05-03 18:31:46: 2026-05-03 20:31:46 [32minfo[39m: ✅ Socket.io inizializzato
+2026-05-03 18:31:46: 2026-05-03 20:31:46 [32minfo[39m: 🍕 Avvio PizzaZen Backend...
+2026-05-03 18:31:46: 2026-05-03 20:31:46 [32minfo[39m: ✅ PostgreSQL connesso — Sun May 03 2026 20:31:46 GMT+0200 (Central European Summer Time)
+2026-05-03 18:31:46: 2026-05-03 20:31:46 [32minfo[39m: ✅ Redis connesso
+2026-05-03 18:31:46: 2026-05-03 20:31:46 [32minfo[39m: ✅ Server in ascolto su porta 3000
+2026-05-03 18:31:46: 2026-05-03 20:31:46 [32minfo[39m: 🌍 Ambiente: production
+2026-05-03 18:31:46: 2026-05-03 20:31:46 [32minfo[39m: 📡 Health check: http://localhost:3000/health
+2026-05-03 18:31:46: 2026-05-03 20:31:46 [32minfo[39m: 🔌 Socket.io attivo
+2026-05-03 18:31:47: 127.0.0.1 - - [03/May/2026:18:31:47 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 421 "-" "curl/7.81.0"
+2026-05-03 18:31:47: 2026-05-03 20:31:47 [32minfo[39m: ✅ Ordine #3 creato — pizzeria 1 — €8.00
+2026-05-03 18:31:47: 127.0.0.1 - - [03/May/2026:18:31:47 +0000] "POST /api/v1/pizzeria/ordini HTTP/1.1" 201 784 "-" "curl/7.81.0"
