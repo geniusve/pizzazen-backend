@@ -181,3 +181,11 @@
 2026-05-02 16:08:33: 2026-05-02 16:08:33 [32minfo[39m: 🔌 Socket.io attivo
 2026-05-02 16:09:07: 127.0.0.1 - - [02/May/2026:16:09:07 +0000] "GET /health HTTP/1.1" 200 123 "-" "curl/7.81.0"
 2026-05-02 16:09:12: 127.0.0.1 - - [02/May/2026:16:09:12 +0000] "POST /api/v1/auth/admin/login HTTP/1.1" 200 280 "-" "curl/7.81.0"
+2026-05-03 08:24:21: 2026-05-03 08:24:21 [32minfo[39m: ✅ Socket.io inizializzato
+2026-05-03 08:24:21: 2026-05-03 08:24:21 [32minfo[39m: 🍕 Avvio PizzaZen Backend...
+2026-05-03 08:24:21: 2026-05-03 08:24:21 [32minfo[39m: ✅ PostgreSQL connesso — Sun May 03 2026 08:24:21 GMT+0000 (Coordinated Universal Time)
+2026-05-03 08:24:21: 2026-05-03 08:24:21 [32minfo[39m: ✅ Redis connesso
+2026-05-03 08:24:21: 2026-05-03 08:24:21 [32minfo[39m: ✅ Server in ascolto su porta 3000
+2026-05-03 08:24:21: 2026-05-03 08:24:21 [32minfo[39m: 🌍 Ambiente: production
+2026-05-03 08:24:21: 2026-05-03 08:24:21 [32minfo[39m: 📡 Health check: http://localhost:3000/health
+2026-05-03 08:24:21: 2026-05-03 08:24:21 [32minfo[39m: 🔌 Socket.io attivo
