@@ -445,22 +445,45 @@ router.patch('/:id/stato', [
       });
     }
 
-    // Log comunicazione WhatsApp (testo da inviare)
+    // Notifica WhatsApp reale tramite WAHA
     const messaggiStato = {
       confermato:       `✅ Ordine #${ordine.numero_ordine} confermato! Ti avviseremo quando sarà pronto.`,
       in_preparazione:  `👨‍🍳 Il tuo ordine #${ordine.numero_ordine} è in preparazione!`,
       pronto:           `🍕 Il tuo ordine #${ordine.numero_ordine} è PRONTO per il ritiro!`,
       consegnato:       `✅ Ordine #${ordine.numero_ordine} consegnato. Grazie e buon appetito!`,
-      annullato:        `❌ Ordine #${ordine.numero_ordine} annullato. Ci scusiamo per l'inconveniente.`,
+      annullato:        `❌ Ordine #${ordine.numero_ordine} annullato. Ci scusiamo per il disagio.`,
     };
 
     if (messaggiStato[stato]) {
+      // Salva comunicazione nel DB
       await db.queryRLS(pizzeriaId,
         `INSERT INTO ordine_comunicazioni (ordine_id, canale, testo, stato)
          VALUES ($1, 'whatsapp', $2, 'in_attesa')`,
         [ordine.id, messaggiStato[stato]]
       );
-      // TODO: qui andrà la chiamata a whatsapp-web.js
+
+      // Manda WA se cliente ha numero
+      const numeroCliente = ordine.cliente_id
+        ? (await db.query('SELECT cellulare FROM clienti WHERE id = $1', [ordine.cliente_id])).rows[0]?.cellulare
+        : ordine.telefono_temp;
+
+      if (numeroCliente) {
+        try {
+          const { mandaNotificaOrdine } = require('../whatsapp');
+          const inviato = await mandaNotificaOrdine(
+            pizzeriaId, numeroCliente, messaggiStato[stato]
+          );
+          // Aggiorna stato comunicazione
+          await db.queryRLS(pizzeriaId,
+            `UPDATE ordine_comunicazioni SET stato = $1
+             WHERE ordine_id = $2 AND canale = 'whatsapp'
+             ORDER BY inviato_at DESC LIMIT 1`,
+            [inviato ? 'inviato' : 'errore', ordine.id]
+          );
+        } catch (waErr) {
+          logger.warn(`WA notifica fallita ordine ${ordine.id}:`, waErr.message);
+        }
+      }
     }
 
     return ok(res, ordine, `Stato aggiornato: ${stato}`);

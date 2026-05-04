@@ -21,6 +21,7 @@ const { initSocket } = require('./socket');
 const routes        = require('./routes');
 
 const app    = express();
+app.set('trust proxy', 1);
 const server = createServer(app);
 
 // ─── Socket.io ───────────────────────────────────────────────

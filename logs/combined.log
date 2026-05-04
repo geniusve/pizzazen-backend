@@ -339,3 +339,19 @@ error: terminating connection due to administrator command
 2026-05-04 10:52:42 [INFO] 📡 Health check: http://localhost:3000/health
 2026-05-04 10:52:42 [INFO] 🔌 Socket.io attivo
 2026-05-04 10:52:46 [INFO] Centralino: link=http://192.168.1.160/ordina/pizzeria-da-mario/WST4GPDN wa=false
+2026-05-04 19:08:06 [INFO] ✅ Socket.io inizializzato
+2026-05-04 19:08:06 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-04 19:08:06 [INFO] ✅ PostgreSQL connesso — 2026-05-04 19:08:06.206343+02
+2026-05-04 19:08:06 [INFO] ✅ Redis connesso
+2026-05-04 19:08:06 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-04 19:08:06 [INFO] 🌍 Ambiente: production
+2026-05-04 19:08:06 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-04 19:08:06 [INFO] 🔌 Socket.io attivo
+2026-05-04 19:10:05 [INFO] ✅ Socket.io inizializzato
+2026-05-04 19:10:05 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-04 19:10:05 [INFO] ✅ PostgreSQL connesso — 2026-05-04 19:10:05.196616+02
+2026-05-04 19:10:05 [INFO] ✅ Redis connesso
+2026-05-04 19:10:05 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-04 19:10:05 [INFO] 🌍 Ambiente: production
+2026-05-04 19:10:05 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-04 19:10:05 [INFO] 🔌 Socket.io attivo
