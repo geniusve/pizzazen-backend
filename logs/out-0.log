@@ -316,3 +316,13 @@
 2026-05-04 08:47:01: 127.0.0.1 - - [04/May/2026:08:47:01 +0000] "GET /health HTTP/1.1" 200 123 "-" "curl/7.81.0"
 2026-05-04 08:47:01: 127.0.0.1 - - [04/May/2026:08:47:01 +0000] "POST /api/v1/auth/admin/login HTTP/1.1" 200 280 "-" "curl/7.81.0"
 2026-05-04 08:47:01: 127.0.0.1 - - [04/May/2026:08:47:01 +0000] "GET /api/v1/admin/pizzerie HTTP/1.1" 200 557 "-" "curl/7.81.0"
+2026-05-04 08:52:42: 2026-05-04 10:52:42 [32minfo[39m: ✅ Socket.io inizializzato
+2026-05-04 08:52:42: 2026-05-04 10:52:42 [32minfo[39m: 🍕 Avvio PizzaZen Backend...
+2026-05-04 08:52:42: 2026-05-04 10:52:42 [32minfo[39m: ✅ PostgreSQL connesso — 2026-05-04 10:52:42.960829+02
+2026-05-04 08:52:42: 2026-05-04 10:52:42 [32minfo[39m: ✅ Redis connesso
+2026-05-04 08:52:42: 2026-05-04 10:52:42 [32minfo[39m: ✅ Server in ascolto su porta 3000
+2026-05-04 08:52:42: 2026-05-04 10:52:42 [32minfo[39m: 🌍 Ambiente: production
+2026-05-04 08:52:42: 2026-05-04 10:52:42 [32minfo[39m: 📡 Health check: http://localhost:3000/health
+2026-05-04 08:52:42: 2026-05-04 10:52:42 [32minfo[39m: 🔌 Socket.io attivo
+2026-05-04 08:52:46: 2026-05-04 10:52:46 [32minfo[39m: Centralino: link=http://192.168.1.160/ordina/pizzeria-da-mario/WST4GPDN wa=false
+2026-05-04 08:52:46: 127.0.0.1 - - [04/May/2026:08:52:46 +0000] "POST /api/v1/centralino/chiamata HTTP/1.1" 200 248 "-" "curl/7.81.0"
