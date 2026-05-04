@@ -8,8 +8,6 @@ router.use('/admin',      require('./admin/index'));
 router.use('/pizzeria',   require('./pizzeria/index'));
 router.use('/tracking',   require('./tracking'));
 router.use('/centralino', require('./centralino'));
-
-// Placeholder
-// router.use('/self-order', require('./selfOrder'));
+router.use('/self-order', require('./selfOrder'));
 
 module.exports = router;

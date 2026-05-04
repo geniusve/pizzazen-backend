@@ -292,8 +292,26 @@ router.post('/', [
       });
     }
 
-    // 3. Calcola totale finale
-    const totale = Math.max(0, subtotale - sconto) + costo_consegna + servizi;
+    // 3. Calcola costo consegna automatico se delivery e non specificato
+    let costoConsegnaFinale = costo_consegna;
+    if (tipo_ordine === 'delivery' && costo_consegna === 0) {
+      const configRes = await client.query(
+        'SELECT delivery_attivo, delivery_costo_tipo, delivery_costo FROM pizzerie WHERE id = $1',
+        [pizzeriaId]
+      );
+      const cfg = configRes.rows[0];
+      if (cfg?.delivery_attivo) {
+        if (cfg.delivery_costo_tipo === 'per_ordine') {
+          costoConsegnaFinale = parseFloat(cfg.delivery_costo);
+        } else if (cfg.delivery_costo_tipo === 'per_pizza') {
+          const totalePizze = articoliElaborati.reduce((s, a) => s + a.quantita, 0);
+          costoConsegnaFinale = parseFloat(cfg.delivery_costo) * totalePizze;
+        }
+      }
+    }
+
+    // Calcola totale finale
+    const totale = Math.max(0, subtotale - sconto) + costoConsegnaFinale + servizi;
 
     // 4. Crea ordine
     const ordineRes = await client.query(
@@ -308,7 +326,7 @@ router.post('/', [
         pizzeriaId, numeroOrdine, tipo_ordine,
         cliente_id || null, nome_cliente_temp || null, telefono_temp || null,
         slot_richiesto || null, tipo_pagamento || null, note || null,
-        subtotale.toFixed(2), sconto, costo_consegna, servizi, totale.toFixed(2)
+        subtotale.toFixed(2), sconto, costoConsegnaFinale, servizi, totale.toFixed(2)
       ]
     );
     const ordine = ordineRes.rows[0];
