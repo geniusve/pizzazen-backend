@@ -284,3 +284,33 @@ error: terminating connection due to administrator command
 2026-05-03 20:47:45 [INFO] 🌍 Ambiente: production
 2026-05-03 20:47:45 [INFO] 📡 Health check: http://localhost:3000/health
 2026-05-03 20:47:45 [INFO] 🔌 Socket.io attivo
+2026-05-04 10:19:15 [INFO] ✅ Socket.io inizializzato
+2026-05-04 10:19:15 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-04 10:19:15 [INFO] ✅ PostgreSQL connesso — 2026-05-04 10:19:15.450591+02
+2026-05-04 10:19:15 [INFO] ✅ Redis connesso
+2026-05-04 10:19:15 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-04 10:19:15 [INFO] 🌍 Ambiente: production
+2026-05-04 10:19:15 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-04 10:19:15 [INFO] 🔌 Socket.io attivo
+2026-05-04 10:19:25 [WARN] Tentativo accesso centralino non autorizzato da 127.0.0.1
+2026-05-04 10:19:45 [WARN] Tentativo accesso centralino non autorizzato da 127.0.0.1
+2026-05-04 10:22:52 [INFO] ✅ Socket.io inizializzato
+2026-05-04 10:22:52 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-04 10:22:52 [INFO] ✅ PostgreSQL connesso — 2026-05-04 10:22:52.848368+02
+2026-05-04 10:22:52 [INFO] ✅ Redis connesso
+2026-05-04 10:22:52 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-04 10:22:52 [INFO] 🌍 Ambiente: production
+2026-05-04 10:22:52 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-04 10:22:52 [INFO] 🔌 Socket.io attivo
+2026-05-04 10:23:47 [INFO] ✅ Socket.io inizializzato
+2026-05-04 10:23:47 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-04 10:23:47 [INFO] ✅ PostgreSQL connesso — 2026-05-04 10:23:47.102981+02
+2026-05-04 10:23:47 [INFO] ✅ Redis connesso
+2026-05-04 10:23:47 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-04 10:23:47 [INFO] 🌍 Ambiente: production
+2026-05-04 10:23:47 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-04 10:23:47 [INFO] 🔌 Socket.io attivo
+2026-05-04 10:24:27 [INFO] Centralino: nuovo cliente id=1 codice=WST4GPDN
+2026-05-04 10:24:27 [INFO] Centralino: link generato http://192.168.1.160/ordina/pizzeria-da-mario/WST4GPDN — WA: false
+2026-05-04 10:24:55 [INFO] Centralino: cliente esistente id=1 per 3471234567
+2026-05-04 10:24:55 [INFO] Centralino: link generato http://192.168.1.160/ordina/pizzeria-da-mario/WST4GPDN — WA: false

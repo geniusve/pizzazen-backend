@@ -256,3 +256,41 @@
 2026-05-03 18:47:45: 2026-05-03 20:47:45 [32minfo[39m: 🌍 Ambiente: production
 2026-05-03 18:47:45: 2026-05-03 20:47:45 [32minfo[39m: 📡 Health check: http://localhost:3000/health
 2026-05-03 18:47:45: 2026-05-03 20:47:45 [32minfo[39m: 🔌 Socket.io attivo
+2026-05-04 06:03:02: 127.0.0.1 - - [04/May/2026:06:03:02 +0000] "GET / HTTP/1.1" 404 72 "-" "-"
+2026-05-04 06:05:49: 127.0.0.1 - - [04/May/2026:06:05:49 +0000] "GET / HTTP/1.1" 404 72 "-" "-"
+2026-05-04 06:30:43: 127.0.0.1 - - [04/May/2026:06:30:43 +0000] "GET / HTTP/1.1" 404 72 "-" "-"
+2026-05-04 06:37:57: 127.0.0.1 - - [04/May/2026:06:37:57 +0000] "GET / HTTP/1.1" 404 72 "-" "-"
+2026-05-04 08:19:15: 2026-05-04 10:19:15 [32minfo[39m: ✅ Socket.io inizializzato
+2026-05-04 08:19:15: 2026-05-04 10:19:15 [32minfo[39m: 🍕 Avvio PizzaZen Backend...
+2026-05-04 08:19:15: 2026-05-04 10:19:15 [32minfo[39m: ✅ PostgreSQL connesso — 2026-05-04 10:19:15.450591+02
+2026-05-04 08:19:15: 2026-05-04 10:19:15 [32minfo[39m: ✅ Redis connesso
+2026-05-04 08:19:15: 2026-05-04 10:19:15 [32minfo[39m: ✅ Server in ascolto su porta 3000
+2026-05-04 08:19:15: 2026-05-04 10:19:15 [32minfo[39m: 🌍 Ambiente: production
+2026-05-04 08:19:15: 2026-05-04 10:19:15 [32minfo[39m: 📡 Health check: http://localhost:3000/health
+2026-05-04 08:19:15: 2026-05-04 10:19:15 [32minfo[39m: 🔌 Socket.io attivo
+2026-05-04 08:19:25: 2026-05-04 10:19:25 [33mwarn[39m: Tentativo accesso centralino non autorizzato da 127.0.0.1
+2026-05-04 08:19:25: 127.0.0.1 - - [04/May/2026:08:19:25 +0000] "POST /api/v1/centralino/chiamata HTTP/1.1" 401 42 "-" "curl/7.81.0"
+2026-05-04 08:19:45: 2026-05-04 10:19:45 [33mwarn[39m: Tentativo accesso centralino non autorizzato da 127.0.0.1
+2026-05-04 08:19:45: 127.0.0.1 - - [04/May/2026:08:19:45 +0000] "POST /api/v1/centralino/chiamata HTTP/1.1" 401 42 "-" "curl/7.81.0"
+2026-05-04 08:22:52: 2026-05-04 10:22:52 [32minfo[39m: ✅ Socket.io inizializzato
+2026-05-04 08:22:52: 2026-05-04 10:22:52 [32minfo[39m: 🍕 Avvio PizzaZen Backend...
+2026-05-04 08:22:52: 2026-05-04 10:22:52 [32minfo[39m: ✅ PostgreSQL connesso — 2026-05-04 10:22:52.848368+02
+2026-05-04 08:22:52: 2026-05-04 10:22:52 [32minfo[39m: ✅ Redis connesso
+2026-05-04 08:22:52: 2026-05-04 10:22:52 [32minfo[39m: ✅ Server in ascolto su porta 3000
+2026-05-04 08:22:52: 2026-05-04 10:22:52 [32minfo[39m: 🌍 Ambiente: production
+2026-05-04 08:22:52: 2026-05-04 10:22:52 [32minfo[39m: 📡 Health check: http://localhost:3000/health
+2026-05-04 08:22:52: 2026-05-04 10:22:52 [32minfo[39m: 🔌 Socket.io attivo
+2026-05-04 08:23:47: 2026-05-04 10:23:47 [32minfo[39m: ✅ Socket.io inizializzato
+2026-05-04 08:23:47: 2026-05-04 10:23:47 [32minfo[39m: 🍕 Avvio PizzaZen Backend...
+2026-05-04 08:23:47: 2026-05-04 10:23:47 [32minfo[39m: ✅ PostgreSQL connesso — 2026-05-04 10:23:47.102981+02
+2026-05-04 08:23:47: 2026-05-04 10:23:47 [32minfo[39m: ✅ Redis connesso
+2026-05-04 08:23:47: 2026-05-04 10:23:47 [32minfo[39m: ✅ Server in ascolto su porta 3000
+2026-05-04 08:23:47: 2026-05-04 10:23:47 [32minfo[39m: 🌍 Ambiente: production
+2026-05-04 08:23:47: 2026-05-04 10:23:47 [32minfo[39m: 📡 Health check: http://localhost:3000/health
+2026-05-04 08:23:47: 2026-05-04 10:23:47 [32minfo[39m: 🔌 Socket.io attivo
+2026-05-04 08:24:27: 2026-05-04 10:24:27 [32minfo[39m: Centralino: nuovo cliente id=1 codice=WST4GPDN
+2026-05-04 08:24:27: 2026-05-04 10:24:27 [32minfo[39m: Centralino: link generato http://192.168.1.160/ordina/pizzeria-da-mario/WST4GPDN — WA: false
+2026-05-04 08:24:27: 127.0.0.1 - - [04/May/2026:08:24:27 +0000] "POST /api/v1/centralino/chiamata HTTP/1.1" 200 247 "-" "curl/7.81.0"
+2026-05-04 08:24:55: 2026-05-04 10:24:55 [32minfo[39m: Centralino: cliente esistente id=1 per 3471234567
+2026-05-04 08:24:55: 2026-05-04 10:24:55 [32minfo[39m: Centralino: link generato http://192.168.1.160/ordina/pizzeria-da-mario/WST4GPDN — WA: false
+2026-05-04 08:24:55: 127.0.0.1 - - [04/May/2026:08:24:55 +0000] "POST /api/v1/centralino/chiamata HTTP/1.1" 200 248 "-" "curl/7.81.0"
