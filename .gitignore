@@ -1,0 +1,12 @@
+node_modules/
+.env
+storage/pizzerie/
+logs/
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.wwebjs_auth/
+.wwebjs_cache/
+dist/
+build/
