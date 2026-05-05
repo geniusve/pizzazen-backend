@@ -15,26 +15,43 @@ const signToken = (payload) => jwt.sign(
 
 // ─── POST /auth/login ─────────────────────────────────────────
 // Login per utenti delle pizzerie
+// pizzeria_slug è opzionale — se non fornito cerca per username globalmente
 router.post('/login', [
   body('username').notEmpty().withMessage('Username obbligatorio'),
   body('password').notEmpty().withMessage('Password obbligatoria'),
-  body('pizzeria_slug').notEmpty().withMessage('Slug pizzeria obbligatorio'),
   validate
 ], async (req, res) => {
   try {
     const { username, password, pizzeria_slug } = req.body;
 
-    const result = await query(
-      `SELECT u.id, u.username, u.password_hash, u.nome, u.tipo,
+    // Se fornito lo slug usa quello, altrimenti cerca per username
+    let queryText, queryParams;
+
+    if (pizzeria_slug) {
+      queryText = `SELECT u.id, u.username, u.password_hash, u.nome, u.tipo,
               u.pizzeria_id, u.attivo,
               u.puo_gestire_menu, u.puo_gestire_clienti, u.puo_vedere_stats,
               p.nome AS pizzeria_nome, p.attiva AS pizzeria_attiva, p.slug
        FROM utenti u
        JOIN pizzerie p ON p.id = u.pizzeria_id
-       WHERE u.username = $1 AND p.slug = $2`,
-      [username, pizzeria_slug]
-    );
+       WHERE u.username = $1 AND p.slug = $2`;
+      queryParams = [username, pizzeria_slug];
+    } else {
+      // Cerca username in tutte le pizzerie
+      // Se lo username esiste in più pizzerie prende la prima attiva
+      queryText = `SELECT u.id, u.username, u.password_hash, u.nome, u.tipo,
+              u.pizzeria_id, u.attivo,
+              u.puo_gestire_menu, u.puo_gestire_clienti, u.puo_vedere_stats,
+              p.nome AS pizzeria_nome, p.attiva AS pizzeria_attiva, p.slug
+       FROM utenti u
+       JOIN pizzerie p ON p.id = u.pizzeria_id
+       WHERE u.username = $1 AND u.attivo = true AND p.attiva = true
+       ORDER BY u.id ASC
+       LIMIT 1`;
+      queryParams = [username];
+    }
 
+    const result = await query(queryText, queryParams);
     const utente = result.rows[0];
 
     if (!utente) return unauthorized(res, 'Credenziali non valide');

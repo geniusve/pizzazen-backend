@@ -438,3 +438,19 @@ error: terminating connection due to administrator command
 2026-05-05 11:32:25 [INFO] 🌍 Ambiente: production
 2026-05-05 11:32:25 [INFO] 📡 Health check: http://localhost:3000/health
 2026-05-05 11:32:25 [INFO] 🔌 Socket.io attivo
+2026-05-05 21:47:33 [INFO] ✅ Socket.io inizializzato
+2026-05-05 21:47:33 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-05 21:47:33 [INFO] ✅ PostgreSQL connesso — 2026-05-05 21:47:33.200022+02
+2026-05-05 21:47:33 [INFO] ✅ Redis connesso
+2026-05-05 21:47:33 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-05 21:47:33 [INFO] 🌍 Ambiente: production
+2026-05-05 21:47:33 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-05 21:47:33 [INFO] 🔌 Socket.io attivo
+2026-05-05 21:56:11 [INFO] ✅ Socket.io inizializzato
+2026-05-05 21:56:11 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-05 21:56:11 [INFO] ✅ PostgreSQL connesso — 2026-05-05 21:56:11.966961+02
+2026-05-05 21:56:11 [INFO] ✅ Redis connesso
+2026-05-05 21:56:11 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-05 21:56:11 [INFO] 🌍 Ambiente: production
+2026-05-05 21:56:11 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-05 21:56:11 [INFO] 🔌 Socket.io attivo

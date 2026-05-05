@@ -459,3 +459,22 @@
 2026-05-05 09:33:04: 127.0.0.1 - - [05/May/2026:09:33:04 +0000] "POST /api/v1/pizzeria/promozioni/valida-codice HTTP/1.1" 200 288 "-" "curl/7.81.0"
 2026-05-05 09:33:31: 127.0.0.1 - - [05/May/2026:09:33:31 +0000] "GET /api/v1/pizzeria/promozioni HTTP/1.1" 200 1095 "-" "curl/7.81.0"
 2026-05-05 09:33:34: 127.0.0.1 - - [05/May/2026:09:33:34 +0000] "GET /api/v1/pizzeria/promozioni/valuta?subtotale=30&tipo_ordine=delivery&costo_consegna=3 HTTP/1.1" 200 70 "-" "curl/7.81.0"
+2026-05-05 19:47:33: 2026-05-05 21:47:33 [32minfo[39m: ✅ Socket.io inizializzato
+2026-05-05 19:47:33: 2026-05-05 21:47:33 [32minfo[39m: 🍕 Avvio PizzaZen Backend...
+2026-05-05 19:47:33: 2026-05-05 21:47:33 [32minfo[39m: ✅ PostgreSQL connesso — 2026-05-05 21:47:33.200022+02
+2026-05-05 19:47:33: 2026-05-05 21:47:33 [32minfo[39m: ✅ Redis connesso
+2026-05-05 19:47:33: 2026-05-05 21:47:33 [32minfo[39m: ✅ Server in ascolto su porta 3000
+2026-05-05 19:47:33: 2026-05-05 21:47:33 [32minfo[39m: 🌍 Ambiente: production
+2026-05-05 19:47:33: 2026-05-05 21:47:33 [32minfo[39m: 📡 Health check: http://localhost:3000/health
+2026-05-05 19:47:33: 2026-05-05 21:47:33 [32minfo[39m: 🔌 Socket.io attivo
+2026-05-05 19:49:01: 127.0.0.1 - - [05/May/2026:19:49:01 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 421 "-" "curl/7.81.0"
+2026-05-05 19:50:46: 192.168.1.160 - - [05/May/2026:19:50:46 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 421 "-" "curl/7.81.0"
+2026-05-05 19:56:11: 2026-05-05 21:56:11 [32minfo[39m: ✅ Socket.io inizializzato
+2026-05-05 19:56:11: 2026-05-05 21:56:11 [32minfo[39m: 🍕 Avvio PizzaZen Backend...
+2026-05-05 19:56:11: 2026-05-05 21:56:11 [32minfo[39m: ✅ PostgreSQL connesso — 2026-05-05 21:56:11.966961+02
+2026-05-05 19:56:11: 2026-05-05 21:56:11 [32minfo[39m: ✅ Redis connesso
+2026-05-05 19:56:11: 2026-05-05 21:56:11 [32minfo[39m: ✅ Server in ascolto su porta 3000
+2026-05-05 19:56:11: 2026-05-05 21:56:11 [32minfo[39m: 🌍 Ambiente: production
+2026-05-05 19:56:11: 2026-05-05 21:56:11 [32minfo[39m: 📡 Health check: http://localhost:3000/health
+2026-05-05 19:56:11: 2026-05-05 21:56:11 [32minfo[39m: 🔌 Socket.io attivo
+2026-05-05 19:56:16: 192.168.1.6 - - [05/May/2026:19:56:16 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 421 "http://192.168.1.160:5173/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Safari/605.1.15"
