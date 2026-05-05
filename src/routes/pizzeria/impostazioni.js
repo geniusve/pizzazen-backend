@@ -1,7 +1,11 @@
-const router = require('express').Router();
+const router  = require('express').Router();
+const path    = require('path');
+const fs      = require('fs');
+const net     = require('net');
+const sharp   = require('sharp');
 const { body } = require('express-validator');
 const db      = require('../../config/database');
-const { validate }          = require('../../middleware/validate');
+const { validate }             = require('../../middleware/validate');
 const { requireAdminPizzeria } = require('../../middleware/auth');
 const { upload, handleUploadError } = require('../../middleware/upload');
 const storage = require('../../config/storage');
@@ -10,7 +14,6 @@ const logger  = require('../../utils/logger');
 
 // ═══════════════════════════════════════════════════════════════
 // GET /pizzeria/impostazioni
-// Tutti i dati della pizzeria visibili e modificabili dal titolare
 // ═══════════════════════════════════════════════════════════════
 router.get('/', async (req, res) => {
   try {
@@ -25,20 +28,13 @@ router.get('/', async (req, res) => {
          nome_titolare, telefono_titolare,
          tipo_pizzeria, descrizione, orario_testo,
          logo_url,
-         -- Stampa termica
          stampa_logo_url, stampa_intestazione,
-         -- Slot
          slot_minuti, slot_max_pizze,
-         -- Delivery
          delivery_attivo, delivery_costo_tipo, delivery_costo, delivery_note,
-         -- Self-order
          selforder_attivo,
-         -- Stampanti
          stampante_cassa_ip, stampante_cassa_porta,
          stampante_cucina_ip, stampante_cucina_porta,
-         -- WhatsApp
          wa_session_attiva, wa_numero,
-         -- Slug
          slug
        FROM pizzerie WHERE id = $1`,
       [pizzeriaId]
@@ -63,7 +59,6 @@ router.get('/', async (req, res) => {
 
 // ═══════════════════════════════════════════════════════════════
 // PUT /pizzeria/impostazioni
-// Aggiorna le impostazioni della pizzeria
 // ═══════════════════════════════════════════════════════════════
 router.put('/', requireAdminPizzeria, [
   body('nome').optional().notEmpty().trim(),
@@ -84,28 +79,21 @@ router.put('/', requireAdminPizzeria, [
     const pizzeriaId = req.utente.pizzeriaId;
 
     const campiAggiornabili = [
-      // Anagrafica
       'nome', 'ragione_sociale', 'partita_iva', 'codice_sdi', 'pec', 'email',
       'via', 'numero_civico', 'cap', 'citta', 'provincia',
       'telefono', 'cellulare', 'telefono_visibile',
       'nome_titolare', 'telefono_titolare',
       'tipo_pizzeria', 'descrizione', 'orario_testo',
-      // Slot
       'slot_minuti', 'slot_max_pizze',
-      // Delivery
       'delivery_attivo', 'delivery_costo_tipo', 'delivery_costo', 'delivery_note',
-      // Self-order
       'selforder_attivo',
-      // Stampanti
       'stampante_cassa_ip', 'stampante_cassa_porta',
       'stampante_cucina_ip', 'stampante_cucina_porta',
-      // Stampa termica
       'stampa_intestazione',
     ];
 
-    const sets   = [];
-    const params = [];
-    let   idx    = 1;
+    const sets = [], params = [];
+    let idx = 1;
 
     for (const campo of campiAggiornabili) {
       if (req.body[campo] !== undefined) {
@@ -131,8 +119,7 @@ router.put('/', requireAdminPizzeria, [
 });
 
 // ═══════════════════════════════════════════════════════════════
-// POST /pizzeria/impostazioni/logo
-// Upload logo della pizzeria
+// POST /pizzeria/impostazioni/logo — Upload logo webapp
 // ═══════════════════════════════════════════════════════════════
 router.post('/logo',
   requireAdminPizzeria,
@@ -143,26 +130,18 @@ router.post('/logo',
       const pizzeriaId = req.utente.pizzeriaId;
       if (!req.file) return badRequest(res, 'File non ricevuto');
 
-      // Elimina logo precedente
       const existing = await db.query(
         'SELECT logo_url FROM pizzerie WHERE id = $1', [pizzeriaId]
       );
-      if (existing.rows[0]?.logo_url) {
-        storage.deleteFile(existing.rows[0].logo_url);
-      }
+      if (existing.rows[0]?.logo_url) storage.deleteFile(existing.rows[0].logo_url);
 
       await storage.saveLogo(req.file.buffer, pizzeriaId);
       const relativePath = `pizzerie/${pizzeriaId}/logo.webp`;
 
-      await db.query(
-        'UPDATE pizzerie SET logo_url = $1 WHERE id = $2',
-        [relativePath, pizzeriaId]
-      );
+      await db.query('UPDATE pizzerie SET logo_url = $1 WHERE id = $2', [relativePath, pizzeriaId]);
 
       const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
-      return ok(res, {
-        logo_url: `${baseUrl}/storage/${relativePath}`
-      }, 'Logo aggiornato');
+      return ok(res, { logo_url: `${baseUrl}/storage/${relativePath}` }, 'Logo aggiornato');
     } catch (err) {
       logger.error('POST logo impostazioni:', err);
       return serverError(res);
@@ -171,8 +150,48 @@ router.post('/logo',
 );
 
 // ═══════════════════════════════════════════════════════════════
-// POST /pizzeria/impostazioni/stampante/test
-// Testa la connessione a una stampante termica Epson
+// POST /pizzeria/impostazioni/stampa-logo — Upload logo stampa termica
+// ═══════════════════════════════════════════════════════════════
+router.post('/stampa-logo',
+  requireAdminPizzeria,
+  upload.single('logo'),
+  handleUploadError,
+  async (req, res) => {
+    try {
+      const pizzeriaId = req.utente.pizzeriaId;
+      if (!req.file) return badRequest(res, 'File non ricevuto');
+
+      const existing = await db.query(
+        'SELECT stampa_logo_url FROM pizzerie WHERE id = $1', [pizzeriaId]
+      );
+      if (existing.rows[0]?.stampa_logo_url) storage.deleteFile(existing.rows[0].stampa_logo_url);
+
+      const dir = path.join(storage.STORAGE_PATH, `pizzerie/${pizzeriaId}`);
+      if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+
+      const filePath = path.join(dir, 'stampa-logo.png');
+      await sharp(req.file.buffer)
+        .resize(400, null, { withoutEnlargement: true })
+        .grayscale()
+        .png()
+        .toFile(filePath);
+
+      const relativePath = `pizzerie/${pizzeriaId}/stampa-logo.png`;
+      await db.query('UPDATE pizzerie SET stampa_logo_url = $1 WHERE id = $2', [relativePath, pizzeriaId]);
+
+      const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
+      return ok(res, {
+        stampa_logo_url: `${baseUrl}/storage/${relativePath}`
+      }, 'Logo stampa aggiornato');
+    } catch (err) {
+      logger.error('POST stampa-logo:', err);
+      return serverError(res);
+    }
+  }
+);
+
+// ═══════════════════════════════════════════════════════════════
+// POST /pizzeria/impostazioni/stampante/test — Testa connessione stampante
 // ═══════════════════════════════════════════════════════════════
 router.post('/stampante/test', requireAdminPizzeria, [
   body('tipo').isIn(['cassa', 'cucina']).withMessage('tipo: cassa o cucina'),
@@ -189,94 +208,26 @@ router.post('/stampante/test', requireAdminPizzeria, [
     );
 
     const { ip, porta } = result.rows[0];
-    if (!ip) {
-      return badRequest(res, `IP stampante ${tipo} non configurato`);
-    }
+    if (!ip) return badRequest(res, `IP stampante ${tipo} non configurato`);
 
-    // Tenta connessione TCP alla stampante
-    const net = require('net');
-    const socket = new net.Socket();
-    const timeout = 3000;
-
+    const socket  = new net.Socket();
     const connesso = await new Promise((resolve) => {
-      socket.setTimeout(timeout);
-      socket.connect(porta || 9100, ip, () => {
-        socket.destroy();
-        resolve(true);
-      });
-      socket.on('error', () => resolve(false));
+      socket.setTimeout(3000);
+      socket.connect(porta || 9100, ip, () => { socket.destroy(); resolve(true); });
+      socket.on('error',   () => resolve(false));
       socket.on('timeout', () => { socket.destroy(); resolve(false); });
     });
 
-    if (connesso) {
-      return ok(res, { ip, porta, raggiungibile: true },
-        `Stampante ${tipo} raggiungibile su ${ip}:${porta}`);
-    } else {
-      return ok(res, { ip, porta, raggiungibile: false },
-        `Stampante ${tipo} non raggiungibile su ${ip}:${porta}`);
-    }
+    return ok(res,
+      { ip, porta, raggiungibile: connesso },
+      connesso
+        ? `Stampante ${tipo} raggiungibile su ${ip}:${porta}`
+        : `Stampante ${tipo} non raggiungibile su ${ip}:${porta}`
+    );
   } catch (err) {
     logger.error('POST test stampante:', err);
     return serverError(res);
   }
 });
-
-// ═══════════════════════════════════════════════════════════════
-// POST /pizzeria/impostazioni/stampa-logo
-// Upload logo dedicato alla stampa termica (B/N ottimizzato)
-// ═══════════════════════════════════════════════════════════════
-router.post('/stampa-logo',
-  requireAdminPizzeria,
-  upload.single('logo'),
-  handleUploadError,
-  async (req, res) => {
-    try {
-      const pizzeriaId = req.utente.pizzeriaId;
-      if (!req.file) return badRequest(res, 'File non ricevuto');
-
-      // Elimina logo stampa precedente
-      const existing = await db.query(
-        'SELECT stampa_logo_url FROM pizzerie WHERE id = $1', [pizzeriaId]
-      );
-      if (existing.rows[0]?.stampa_logo_url) {
-        storage.deleteFile(existing.rows[0].stampa_logo_url);
-      }
-
-      // Salva ottimizzato per stampa termica:
-      // - Scala a 400px larghezza max
-      // - Converti in bianco/nero (grayscale)
-      // - PNG per compatibilità ePOS
-      const sharp = require('sharp');
-      const pathLib = require('path');
-      const fs = require('fs');
-
-      const dir = pathLib.join(
-        storage.STORAGE_PATH, `pizzerie/${pizzeriaId}`
-      );
-      if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-
-      const filePath = pathLib.join(dir, 'stampa-logo.png');
-      await sharp(req.file.buffer)
-        .resize(400, null, { withoutEnlargement: true })
-        .grayscale()
-        .png()
-        .toFile(filePath);
-
-      const relativePath = `pizzerie/${pizzeriaId}/stampa-logo.png`;
-      await db.query(
-        'UPDATE pizzerie SET stampa_logo_url = $1 WHERE id = $2',
-        [relativePath, pizzeriaId]
-      );
-
-      const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
-      return ok(res, {
-        stampa_logo_url: `${baseUrl}/storage/${relativePath}`
-      }, 'Logo stampa aggiornato');
-    } catch (err) {
-      logger.error('POST stampa-logo:', err);
-      return serverError(res);
-    }
-  }
-);
 
 module.exports = router;
