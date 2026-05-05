@@ -355,3 +355,36 @@ error: terminating connection due to administrator command
 2026-05-04 19:10:05 [INFO] 🌍 Ambiente: production
 2026-05-04 19:10:05 [INFO] 📡 Health check: http://localhost:3000/health
 2026-05-04 19:10:05 [INFO] 🔌 Socket.io attivo
+2026-05-04 19:29:26 [INFO] ✅ Ordine #1 creato — pizzeria 1 — €8.00
+2026-05-04 19:30:10 [WARN] WA notifica fallita ordine 5:
+2026-05-04 19:32:33 [INFO] ✅ Socket.io inizializzato
+2026-05-04 19:32:33 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-04 19:32:33 [INFO] ✅ PostgreSQL connesso — 2026-05-04 19:32:33.575211+02
+2026-05-04 19:32:33 [INFO] ✅ Redis connesso
+2026-05-04 19:32:33 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-04 19:32:33 [INFO] 🌍 Ambiente: production
+2026-05-04 19:32:33 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-04 19:32:33 [INFO] 🔌 Socket.io attivo
+2026-05-04 19:33:00 [WARN] WA notifica fallita ordine 5:
+2026-05-04 19:33:08 [INFO] ✅ Socket.io inizializzato
+2026-05-04 19:33:08 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-04 19:33:08 [INFO] ✅ PostgreSQL connesso — 2026-05-04 19:33:08.54144+02
+2026-05-04 19:33:08 [INFO] ✅ Redis connesso
+2026-05-04 19:33:08 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-04 19:33:08 [INFO] 🌍 Ambiente: production
+2026-05-04 19:33:08 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-04 19:33:08 [INFO] 🔌 Socket.io attivo
+2026-05-04 19:33:11 [WARN] WA notifica fallita ordine 5:
+2026-05-05 08:57:10 [INFO] ✅ Socket.io inizializzato
+2026-05-05 08:57:10 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-05 08:57:10 [INFO] ✅ PostgreSQL connesso — 2026-05-05 08:57:10.269919+02
+2026-05-05 08:57:10 [INFO] ✅ Redis connesso
+2026-05-05 08:57:10 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-05 08:57:10 [INFO] 🌍 Ambiente: production
+2026-05-05 08:57:10 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-05 08:57:10 [INFO] 🔌 Socket.io attivo
+2026-05-05 08:57:23 [WARN] WA notifica fallita ordine 5:
+2026-05-05 08:59:13 [INFO] ✅ Ordine #1 creato — pizzeria 1 — €8.00
+2026-05-05 08:59:40 [INFO] ✅ Ordine #2 creato — pizzeria 1 — €8.00
+2026-05-05 09:00:19 [INFO] ✅ Ordine #3 creato — pizzeria 1 — €8.00
+2026-05-05 09:00:19 [WARN] WA notifica fallita ordine 8:

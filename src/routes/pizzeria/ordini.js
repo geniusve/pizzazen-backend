@@ -469,7 +469,7 @@ router.patch('/:id/stato', [
 
       if (numeroCliente) {
         try {
-          const { mandaNotificaOrdine } = require('../whatsapp');
+          const { mandaNotificaOrdine } = require('./whatsapp');
           const inviato = await mandaNotificaOrdine(
             pizzeriaId, numeroCliente, messaggiStato[stato]
           );

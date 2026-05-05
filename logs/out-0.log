@@ -351,3 +351,49 @@
 2026-05-04 17:10:06: 127.0.0.1 - - [04/May/2026:17:10:06 +0000] "GET /api/v1/pizzeria/impostazioni HTTP/1.1" 200 877 "-" "curl/7.81.0"
 2026-05-04 17:11:58: 127.0.0.1 - - [04/May/2026:17:11:58 +0000] "GET /api/v1/pizzeria/impostazioni HTTP/1.1" 200 877 "-" "curl/7.81.0"
 2026-05-04 17:12:41: 127.0.0.1 - - [04/May/2026:17:12:41 +0000] "GET /api/v1/pizzeria/whatsapp/stato HTTP/1.1" 200 128 "-" "curl/7.81.0"
+2026-05-04 17:29:26: 2026-05-04 19:29:26 [32minfo[39m: ✅ Ordine #1 creato — pizzeria 1 — €8.00
+2026-05-04 17:29:26: 127.0.0.1 - - [04/May/2026:17:29:26 +0000] "POST /api/v1/pizzeria/ordini HTTP/1.1" 201 795 "-" "curl/7.81.0"
+2026-05-04 17:29:34: 127.0.0.1 - - [04/May/2026:17:29:34 +0000] "PATCH /api/v1/pizzeria/ordini/ID_ORDINE/stato HTTP/1.1" 422 160 "-" "curl/7.81.0"
+2026-05-04 17:30:10: 2026-05-04 19:30:10 [33mwarn[39m: WA notifica fallita ordine 5:
+2026-05-04 17:30:10: 127.0.0.1 - - [04/May/2026:17:30:10 +0000] "PATCH /api/v1/pizzeria/ordini/5/stato HTTP/1.1" 200 226 "-" "curl/7.81.0"
+2026-05-04 17:32:33: 2026-05-04 19:32:33 [32minfo[39m: ✅ Socket.io inizializzato
+2026-05-04 17:32:33: 2026-05-04 19:32:33 [32minfo[39m: 🍕 Avvio PizzaZen Backend...
+2026-05-04 17:32:33: 2026-05-04 19:32:33 [32minfo[39m: ✅ PostgreSQL connesso — 2026-05-04 19:32:33.575211+02
+2026-05-04 17:32:33: 2026-05-04 19:32:33 [32minfo[39m: ✅ Redis connesso
+2026-05-04 17:32:33: 2026-05-04 19:32:33 [32minfo[39m: ✅ Server in ascolto su porta 3000
+2026-05-04 17:32:33: 2026-05-04 19:32:33 [32minfo[39m: 🌍 Ambiente: production
+2026-05-04 17:32:33: 2026-05-04 19:32:33 [32minfo[39m: 📡 Health check: http://localhost:3000/health
+2026-05-04 17:32:33: 2026-05-04 19:32:33 [32minfo[39m: 🔌 Socket.io attivo
+2026-05-04 17:33:00: 2026-05-04 19:33:00 [33mwarn[39m: WA notifica fallita ordine 5:
+2026-05-04 17:33:00: 127.0.0.1 - - [04/May/2026:17:33:00 +0000] "PATCH /api/v1/pizzeria/ordini/5/stato HTTP/1.1" 200 236 "-" "curl/7.81.0"
+2026-05-04 17:33:08: 2026-05-04 19:33:08 [32minfo[39m: ✅ Socket.io inizializzato
+2026-05-04 17:33:08: 2026-05-04 19:33:08 [32minfo[39m: 🍕 Avvio PizzaZen Backend...
+2026-05-04 17:33:08: 2026-05-04 19:33:08 [32minfo[39m: ✅ PostgreSQL connesso — 2026-05-04 19:33:08.54144+02
+2026-05-04 17:33:08: 2026-05-04 19:33:08 [32minfo[39m: ✅ Redis connesso
+2026-05-04 17:33:08: 2026-05-04 19:33:08 [32minfo[39m: ✅ Server in ascolto su porta 3000
+2026-05-04 17:33:08: 2026-05-04 19:33:08 [32minfo[39m: 🌍 Ambiente: production
+2026-05-04 17:33:08: 2026-05-04 19:33:08 [32minfo[39m: 📡 Health check: http://localhost:3000/health
+2026-05-04 17:33:08: 2026-05-04 19:33:08 [32minfo[39m: 🔌 Socket.io attivo
+2026-05-04 17:33:11: 2026-05-04 19:33:11 [33mwarn[39m: WA notifica fallita ordine 5:
+2026-05-04 17:33:11: 127.0.0.1 - - [04/May/2026:17:33:11 +0000] "PATCH /api/v1/pizzeria/ordini/5/stato HTTP/1.1" 200 236 "-" "curl/7.81.0"
+2026-05-05 06:56:35: 127.0.0.1 - - [05/May/2026:06:56:35 +0000] "PATCH /api/v1/pizzeria/ordini/5/stato HTTP/1.1" 401 79 "-" "curl/7.81.0"
+2026-05-05 06:57:10: 2026-05-05 08:57:10 [32minfo[39m: ✅ Socket.io inizializzato
+2026-05-05 06:57:10: 2026-05-05 08:57:10 [32minfo[39m: 🍕 Avvio PizzaZen Backend...
+2026-05-05 06:57:10: 2026-05-05 08:57:10 [32minfo[39m: ✅ PostgreSQL connesso — 2026-05-05 08:57:10.269919+02
+2026-05-05 06:57:10: 2026-05-05 08:57:10 [32minfo[39m: ✅ Redis connesso
+2026-05-05 06:57:10: 2026-05-05 08:57:10 [32minfo[39m: ✅ Server in ascolto su porta 3000
+2026-05-05 06:57:10: 2026-05-05 08:57:10 [32minfo[39m: 🌍 Ambiente: production
+2026-05-05 06:57:10: 2026-05-05 08:57:10 [32minfo[39m: 📡 Health check: http://localhost:3000/health
+2026-05-05 06:57:10: 2026-05-05 08:57:10 [32minfo[39m: 🔌 Socket.io attivo
+2026-05-05 06:57:11: 127.0.0.1 - - [05/May/2026:06:57:11 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 421 "-" "curl/7.81.0"
+2026-05-05 06:57:11: 127.0.0.1 - - [05/May/2026:06:57:11 +0000] "GET /api/v1/pizzeria/impostazioni HTTP/1.1" 200 886 "-" "curl/7.81.0"
+2026-05-05 06:57:23: 2026-05-05 08:57:23 [33mwarn[39m: WA notifica fallita ordine 5:
+2026-05-05 06:57:23: 127.0.0.1 - - [05/May/2026:06:57:23 +0000] "PATCH /api/v1/pizzeria/ordini/5/stato HTTP/1.1" 200 218 "-" "curl/7.81.0"
+2026-05-05 06:59:13: 2026-05-05 08:59:13 [32minfo[39m: ✅ Ordine #1 creato — pizzeria 1 — €8.00
+2026-05-05 06:59:13: 127.0.0.1 - - [05/May/2026:06:59:13 +0000] "POST /api/v1/pizzeria/ordini HTTP/1.1" 201 797 "-" "curl/7.81.0"
+2026-05-05 06:59:40: 2026-05-05 08:59:40 [32minfo[39m: ✅ Ordine #2 creato — pizzeria 1 — €8.00
+2026-05-05 06:59:40: 127.0.0.1 - - [05/May/2026:06:59:40 +0000] "POST /api/v1/pizzeria/ordini HTTP/1.1" 201 797 "-" "curl/7.81.0"
+2026-05-05 07:00:19: 2026-05-05 09:00:19 [32minfo[39m: ✅ Ordine #3 creato — pizzeria 1 — €8.00
+2026-05-05 07:00:19: 127.0.0.1 - - [05/May/2026:07:00:19 +0000] "POST /api/v1/pizzeria/ordini HTTP/1.1" 201 795 "-" "curl/7.81.0"
+2026-05-05 07:00:19: 2026-05-05 09:00:19 [33mwarn[39m: WA notifica fallita ordine 8:
+2026-05-05 07:00:19: 127.0.0.1 - - [05/May/2026:07:00:19 +0000] "PATCH /api/v1/pizzeria/ordini/8/stato HTTP/1.1" 200 226 "-" "curl/7.81.0"
