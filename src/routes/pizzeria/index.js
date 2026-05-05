@@ -13,5 +13,6 @@ router.use('/ordini',       require('./ordini'));
 router.use('/stats',        require('./stats'));
 router.use('/impostazioni', require('./impostazioni'));
 router.use('/whatsapp',     require('./whatsapp'));
+router.use('/promozioni',   require('./promozioni'));
 
 module.exports = router;

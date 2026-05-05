@@ -461,3 +461,1155 @@
 2026-05-04 17:08:48:   code: 'ERR_ERL_UNEXPECTED_X_FORWARDED_FOR',
 2026-05-04 17:08:48:   help: 'https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/'
 2026-05-04 17:08:48: }
+2026-05-05 09:19:49: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:19:49: Require stack:
+2026-05-05 09:19:49: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:19:49: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:19:49: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:19:49: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:19:49:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:19:49:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:19:49:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:19:49:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:19:49:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:19:49:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:19:49:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:19:49:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:19:49:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:19:49:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:19:49:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:19:49:   requireStack: [
+2026-05-05 09:19:49:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:19:49:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:19:49:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:19:49:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:19:49:   ]
+2026-05-05 09:19:49: }
+2026-05-05 09:19:53: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:19:53: Require stack:
+2026-05-05 09:19:53: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:19:53: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:19:53: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:19:53: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:19:53:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:19:53:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:19:53:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:19:53:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:19:53:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:19:53:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:19:53:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:19:53:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:19:53:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:19:53:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:19:53:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:19:53:   requireStack: [
+2026-05-05 09:19:53:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:19:53:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:19:53:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:19:53:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:19:53:   ]
+2026-05-05 09:19:53: }
+2026-05-05 09:19:57: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:19:57: Require stack:
+2026-05-05 09:19:57: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:19:57: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:19:57: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:19:57: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:19:57:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:19:57:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:19:57:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:19:57:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:19:57:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:19:57:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:19:57:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:19:57:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:19:57:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:19:57:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:19:57:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:19:57:   requireStack: [
+2026-05-05 09:19:57:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:19:57:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:19:57:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:19:57:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:19:57:   ]
+2026-05-05 09:19:57: }
+2026-05-05 09:20:01: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:20:01: Require stack:
+2026-05-05 09:20:01: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:20:01: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:20:01: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:20:01: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:20:01:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:20:01:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:20:01:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:20:01:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:20:01:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:20:01:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:20:01:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:20:01:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:20:01:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:20:01:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:20:01:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:20:01:   requireStack: [
+2026-05-05 09:20:01:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:20:01:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:20:01:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:20:01:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:20:01:   ]
+2026-05-05 09:20:01: }
+2026-05-05 09:20:04: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:20:04: Require stack:
+2026-05-05 09:20:04: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:20:04: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:20:04: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:20:04: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:20:04:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:20:04:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:20:04:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:20:04:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:20:04:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:20:04:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:20:04:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:20:04:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:20:04:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:20:04:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:20:04:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:20:04:   requireStack: [
+2026-05-05 09:20:04:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:20:04:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:20:05:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:20:05:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:20:05:   ]
+2026-05-05 09:20:05: }
+2026-05-05 09:20:08: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:20:08: Require stack:
+2026-05-05 09:20:08: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:20:08: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:20:08: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:20:08: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:20:08:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:20:08:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:20:08:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:20:08:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:20:08:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:20:08:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:20:08:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:20:08:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:20:08:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:20:08:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:20:08:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:20:08:   requireStack: [
+2026-05-05 09:20:08:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:20:08:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:20:08:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:20:08:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:20:08:   ]
+2026-05-05 09:20:08: }
+2026-05-05 09:20:12: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:20:12: Require stack:
+2026-05-05 09:20:12: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:20:12: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:20:12: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:20:12: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:20:12:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:20:12:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:20:12:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:20:12:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:20:12:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:20:12:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:20:12:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:20:12:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:20:12:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:20:12:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:20:12:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:20:12:   requireStack: [
+2026-05-05 09:20:12:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:20:12:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:20:12:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:20:12:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:20:12:   ]
+2026-05-05 09:20:12: }
+2026-05-05 09:20:16: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:20:16: Require stack:
+2026-05-05 09:20:16: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:20:16: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:20:16: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:20:16: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:20:16:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:20:16:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:20:16:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:20:16:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:20:16:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:20:16:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:20:16:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:20:16:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:20:16:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:20:16:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:20:16:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:20:16:   requireStack: [
+2026-05-05 09:20:16:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:20:16:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:20:16:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:20:16:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:20:16:   ]
+2026-05-05 09:20:16: }
+2026-05-05 09:20:20: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:20:20: Require stack:
+2026-05-05 09:20:20: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:20:20: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:20:20: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:20:20: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:20:20:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:20:20:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:20:20:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:20:20:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:20:20:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:20:20:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:20:20:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:20:20:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:20:20:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:20:20:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:20:20:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:20:20:   requireStack: [
+2026-05-05 09:20:20:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:20:20:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:20:20:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:20:20:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:20:20:   ]
+2026-05-05 09:20:20: }
+2026-05-05 09:20:24: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:20:24: Require stack:
+2026-05-05 09:20:24: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:20:24: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:20:24: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:20:24: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:20:24:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:20:24:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:20:24:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:20:24:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:20:24:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:20:24:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:20:24:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:20:24:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:20:24:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:20:24:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:20:24:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:20:24:   requireStack: [
+2026-05-05 09:20:24:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:20:24:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:20:24:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:20:24:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:20:24:   ]
+2026-05-05 09:20:24: }
+2026-05-05 09:20:28: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:20:28: Require stack:
+2026-05-05 09:20:28: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:20:28: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:20:28: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:20:28: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:20:28:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:20:28:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:20:28:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:20:28:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:20:28:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:20:28:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:20:28:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:20:28:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:20:28:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:20:28:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:20:28:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:20:28:   requireStack: [
+2026-05-05 09:20:28:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:20:28:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:20:28:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:20:28:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:20:28:   ]
+2026-05-05 09:20:28: }
+2026-05-05 09:20:31: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:20:31: Require stack:
+2026-05-05 09:20:31: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:20:31: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:20:31: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:20:31: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:20:31:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:20:31:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:20:31:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:20:31:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:20:31:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:20:31:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:20:31:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:20:31:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:20:31:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:20:31:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:20:31:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:20:31:   requireStack: [
+2026-05-05 09:20:31:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:20:31:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:20:31:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:20:31:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:20:31:   ]
+2026-05-05 09:20:31: }
+2026-05-05 09:20:35: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:20:35: Require stack:
+2026-05-05 09:20:35: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:20:35: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:20:35: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:20:35: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:20:35:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:20:35:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:20:35:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:20:35:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:20:35:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:20:35:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:20:35:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:20:35:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:20:35:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:20:35:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:20:35:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:20:35:   requireStack: [
+2026-05-05 09:20:35:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:20:35:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:20:35:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:20:35:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:20:35:   ]
+2026-05-05 09:20:35: }
+2026-05-05 09:20:39: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:20:39: Require stack:
+2026-05-05 09:20:39: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:20:39: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:20:39: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:20:39: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:20:39:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:20:39:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:20:39:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:20:39:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:20:39:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:20:39:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:20:39:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:20:39:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:20:39:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:20:39:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:20:39:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:20:39:   requireStack: [
+2026-05-05 09:20:39:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:20:39:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:20:39:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:20:39:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:20:39:   ]
+2026-05-05 09:20:39: }
+2026-05-05 09:20:43: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:20:43: Require stack:
+2026-05-05 09:20:43: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:20:43: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:20:43: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:20:43: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:20:43:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:20:43:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:20:43:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:20:43:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:20:43:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:20:43:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:20:43:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:20:43:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:20:43:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:20:43:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:20:43:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:20:43:   requireStack: [
+2026-05-05 09:20:43:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:20:43:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:20:43:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:20:43:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:20:43:   ]
+2026-05-05 09:20:43: }
+2026-05-05 09:20:47: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:20:47: Require stack:
+2026-05-05 09:20:47: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:20:47: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:20:47: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:20:47: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:20:47:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:20:47:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:20:47:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:20:47:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:20:47:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:20:47:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:20:47:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:20:47:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:20:47:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:20:47:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:20:47:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:20:47:   requireStack: [
+2026-05-05 09:20:47:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:20:47:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:20:47:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:20:47:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:20:47:   ]
+2026-05-05 09:20:47: }
+2026-05-05 09:20:51: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:20:51: Require stack:
+2026-05-05 09:20:51: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:20:51: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:20:51: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:20:51: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:20:51:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:20:51:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:20:51:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:20:51:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:20:51:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:20:51:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:20:51:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:20:51:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:20:51:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:20:51:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:20:51:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:20:51:   requireStack: [
+2026-05-05 09:20:51:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:20:51:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:20:51:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:20:51:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:20:51:   ]
+2026-05-05 09:20:51: }
+2026-05-05 09:20:55: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:20:55: Require stack:
+2026-05-05 09:20:55: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:20:55: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:20:55: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:20:55: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:20:55:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:20:55:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:20:55:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:20:55:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:20:55:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:20:55:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:20:55:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:20:55:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:20:55:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:20:55:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:20:55:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:20:55:   requireStack: [
+2026-05-05 09:20:55:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:20:55:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:20:55:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:20:55:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:20:55:   ]
+2026-05-05 09:20:55: }
+2026-05-05 09:20:58: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:20:58: Require stack:
+2026-05-05 09:20:58: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:20:58: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:20:58: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:20:58: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:20:58:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:20:58:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:20:58:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:20:58:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:20:58:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:20:58:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:20:58:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:20:58:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:20:58:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:20:58:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:20:58:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:20:58:   requireStack: [
+2026-05-05 09:20:58:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:20:58:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:20:58:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:20:58:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:20:58:   ]
+2026-05-05 09:20:58: }
+2026-05-05 09:21:02: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:21:02: Require stack:
+2026-05-05 09:21:02: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:21:02: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:21:02: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:21:02: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:21:02:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:21:02:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:21:02:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:21:02:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:21:02:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:21:02:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:21:02:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:21:02:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:21:02:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:21:02:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:21:02:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:21:02:   requireStack: [
+2026-05-05 09:21:02:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:21:02:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:21:02:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:21:02:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:21:02:   ]
+2026-05-05 09:21:02: }
+2026-05-05 09:21:06: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:21:06: Require stack:
+2026-05-05 09:21:06: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:21:06: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:21:06: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:21:06: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:21:06:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:21:06:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:21:06:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:21:06:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:21:06:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:21:06:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:21:06:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:21:06:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:21:06:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:21:06:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:21:06:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:21:06:   requireStack: [
+2026-05-05 09:21:06:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:21:06:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:21:06:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:21:06:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:21:06:   ]
+2026-05-05 09:21:06: }
+2026-05-05 09:21:10: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:21:10: Require stack:
+2026-05-05 09:21:10: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:21:10: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:21:10: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:21:10: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:21:10:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:21:10:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:21:10:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:21:10:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:21:10:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:21:10:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:21:10:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:21:10:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:21:10:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:21:10:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:21:10:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:21:10:   requireStack: [
+2026-05-05 09:21:10:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:21:10:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:21:10:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:21:10:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:21:10:   ]
+2026-05-05 09:21:10: }
+2026-05-05 09:21:14: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:21:14: Require stack:
+2026-05-05 09:21:14: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:21:14: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:21:14: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:21:14: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:21:14:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:21:14:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:21:14:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:21:14:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:21:14:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:21:14:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:21:14:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:21:14:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:21:14:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:21:14:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:21:14:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:21:14:   requireStack: [
+2026-05-05 09:21:14:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:21:14:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:21:14:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:21:14:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:21:14:   ]
+2026-05-05 09:21:14: }
+2026-05-05 09:21:18: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:21:18: Require stack:
+2026-05-05 09:21:18: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:21:18: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:21:18: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:21:18: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:21:18:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:21:18:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:21:18:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:21:18:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:21:18:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:21:18:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:21:18:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:21:18:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:21:18:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:21:18:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:21:18:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:21:18:   requireStack: [
+2026-05-05 09:21:18:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:21:18:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:21:18:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:21:18:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:21:18:   ]
+2026-05-05 09:21:18: }
+2026-05-05 09:21:22: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:21:22: Require stack:
+2026-05-05 09:21:22: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:21:22: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:21:22: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:21:22: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:21:22:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:21:22:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:21:22:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:21:22:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:21:22:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:21:22:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:21:22:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:21:22:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:21:22:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:21:22:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:21:22:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:21:22:   requireStack: [
+2026-05-05 09:21:22:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:21:22:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:21:22:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:21:22:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:21:22:   ]
+2026-05-05 09:21:22: }
+2026-05-05 09:21:25: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:21:25: Require stack:
+2026-05-05 09:21:25: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:21:25: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:21:25: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:21:25: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:21:25:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:21:25:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:21:25:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:21:25:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:21:25:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:21:25:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:21:25:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:21:25:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:21:25:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:21:25:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:21:25:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:21:25:   requireStack: [
+2026-05-05 09:21:25:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:21:25:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:21:25:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:21:25:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:21:25:   ]
+2026-05-05 09:21:25: }
+2026-05-05 09:21:29: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:21:29: Require stack:
+2026-05-05 09:21:29: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:21:29: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:21:29: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:21:29: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:21:29:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:21:29:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:21:29:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:21:29:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:21:29:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:21:29:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:21:29:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:21:29:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:21:29:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:21:29:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:21:29:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:21:29:   requireStack: [
+2026-05-05 09:21:29:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:21:29:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:21:29:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:21:29:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:21:29:   ]
+2026-05-05 09:21:29: }
+2026-05-05 09:21:33: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:21:33: Require stack:
+2026-05-05 09:21:33: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:21:33: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:21:33: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:21:33: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:21:33:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:21:33:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:21:33:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:21:33:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:21:33:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:21:33:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:21:33:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:21:33:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:21:33:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:21:33:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:21:33:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:21:33:   requireStack: [
+2026-05-05 09:21:33:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:21:33:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:21:33:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:21:33:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:21:33:   ]
+2026-05-05 09:21:33: }
+2026-05-05 09:21:37: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:21:37: Require stack:
+2026-05-05 09:21:37: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:21:37: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:21:37: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:21:37: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:21:37:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:21:37:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:21:37:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:21:37:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:21:37:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:21:37:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:21:37:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:21:37:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:21:37:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:21:37:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:21:37:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:21:37:   requireStack: [
+2026-05-05 09:21:37:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:21:37:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:21:37:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:21:37:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:21:37:   ]
+2026-05-05 09:21:37: }
+2026-05-05 09:21:41: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:21:41: Require stack:
+2026-05-05 09:21:41: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:21:41: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:21:41: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:21:41: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:21:41:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:21:41:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:21:41:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:21:41:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:21:41:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:21:41:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:21:41:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:21:41:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:21:41:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:21:41:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:21:41:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:21:41:   requireStack: [
+2026-05-05 09:21:41:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:21:41:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:21:41:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:21:41:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:21:41:   ]
+2026-05-05 09:21:41: }
+2026-05-05 09:21:45: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:21:45: Require stack:
+2026-05-05 09:21:45: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:21:45: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:21:45: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:21:45: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:21:45:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:21:45:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:21:45:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:21:45:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:21:45:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:21:45:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:21:45:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:21:45:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:21:45:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:21:45:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:21:45:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:21:45:   requireStack: [
+2026-05-05 09:21:45:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:21:45:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:21:45:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:21:45:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:21:45:   ]
+2026-05-05 09:21:45: }
+2026-05-05 09:21:49: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:21:49: Require stack:
+2026-05-05 09:21:49: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:21:49: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:21:49: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:21:49: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:21:49:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:21:49:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:21:49:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:21:49:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:21:49:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:21:49:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:21:49:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:21:49:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:21:49:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:21:49:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:21:49:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:21:49:   requireStack: [
+2026-05-05 09:21:49:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:21:49:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:21:49:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:21:49:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:21:49:   ]
+2026-05-05 09:21:49: }
+2026-05-05 09:21:52: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:21:52: Require stack:
+2026-05-05 09:21:52: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:21:52: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:21:52: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:21:52: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:21:52:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:21:52:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:21:52:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:21:52:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:21:52:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:21:52:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:21:52:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:21:52:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:21:52:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:21:52:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:21:52:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:21:52:   requireStack: [
+2026-05-05 09:21:52:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:21:52:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:21:52:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:21:52:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:21:52:   ]
+2026-05-05 09:21:52: }
+2026-05-05 09:21:56: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:21:56: Require stack:
+2026-05-05 09:21:56: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:21:56: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:21:56: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:21:56: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:21:56:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:21:56:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:21:56:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:21:56:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:21:56:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:21:56:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:21:56:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:21:56:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:21:56:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:21:56:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:21:56:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:21:56:   requireStack: [
+2026-05-05 09:21:56:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:21:56:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:21:56:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:21:56:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:21:56:   ]
+2026-05-05 09:21:56: }
+2026-05-05 09:22:00: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:22:00: Require stack:
+2026-05-05 09:22:00: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:22:00: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:22:00: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:22:00: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:22:00:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:22:00:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:22:00:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:22:00:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:22:00:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:22:00:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:22:00:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:22:00:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:22:00:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:22:00:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:22:00:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:22:00:   requireStack: [
+2026-05-05 09:22:00:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:22:00:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:22:00:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:22:00:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:22:00:   ]
+2026-05-05 09:22:00: }
+2026-05-05 09:22:04: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:22:04: Require stack:
+2026-05-05 09:22:04: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:22:04: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:22:04: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:22:04: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:22:04:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:22:04:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:22:04:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:22:04:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:22:04:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:22:04:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:22:04:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:22:04:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:22:04:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:22:04:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:22:04:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:22:04:   requireStack: [
+2026-05-05 09:22:04:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:22:04:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:22:04:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:22:04:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:22:04:   ]
+2026-05-05 09:22:04: }
+2026-05-05 09:22:08: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:22:08: Require stack:
+2026-05-05 09:22:08: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:22:08: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:22:08: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:22:08: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:22:08:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:22:08:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:22:08:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:22:08:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:22:08:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:22:08:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:22:08:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:22:08:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:22:08:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:22:08:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:22:08:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:22:08:   requireStack: [
+2026-05-05 09:22:08:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:22:08:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:22:08:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:22:08:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:22:08:   ]
+2026-05-05 09:22:08: }
+2026-05-05 09:22:12: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:22:12: Require stack:
+2026-05-05 09:22:12: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:22:12: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:22:12: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:22:12: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:22:12:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:22:12:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:22:12:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:22:12:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:22:12:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:22:12:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:22:12:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:22:12:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:22:12:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:22:12:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:22:12:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:22:12:   requireStack: [
+2026-05-05 09:22:12:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:22:12:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:22:12:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:22:12:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:22:12:   ]
+2026-05-05 09:22:12: }
+2026-05-05 09:22:16: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:22:16: Require stack:
+2026-05-05 09:22:16: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:22:16: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:22:16: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:22:16: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:22:16:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:22:16:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:22:16:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:22:16:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:22:16:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:22:16:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:22:16:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:22:16:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:22:16:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:22:16:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:22:16:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:22:16:   requireStack: [
+2026-05-05 09:22:16:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:22:16:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:22:16:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:22:16:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:22:16:   ]
+2026-05-05 09:22:16: }
+2026-05-05 09:22:19: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:22:19: Require stack:
+2026-05-05 09:22:19: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:22:19: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:22:19: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:22:19: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:22:19:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:22:19:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:22:19:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:22:19:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:22:19:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:22:19:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:22:19:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:22:19:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:22:19:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:22:19:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:22:19:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:22:19:   requireStack: [
+2026-05-05 09:22:19:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:22:19:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:22:19:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:22:19:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:22:19:   ]
+2026-05-05 09:22:19: }
+2026-05-05 09:22:23: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:22:23: Require stack:
+2026-05-05 09:22:23: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:22:23: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:22:23: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:22:23: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:22:23:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:22:23:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:22:23:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:22:23:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:22:23:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:22:23:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:22:23:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:22:23:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:22:23:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:22:23:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:22:23:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:22:23:   requireStack: [
+2026-05-05 09:22:23:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:22:23:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:22:23:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:22:23:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:22:23:   ]
+2026-05-05 09:22:23: }
+2026-05-05 09:22:27: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:22:27: Require stack:
+2026-05-05 09:22:27: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:22:27: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:22:27: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:22:27: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:22:27:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:22:27:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:22:27:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:22:27:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:22:27:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:22:27:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:22:27:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:22:27:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:22:27:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:22:27:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:22:27:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:22:27:   requireStack: [
+2026-05-05 09:22:27:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:22:27:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:22:27:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:22:27:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:22:27:   ]
+2026-05-05 09:22:27: }
+2026-05-05 09:22:31: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:22:31: Require stack:
+2026-05-05 09:22:31: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:22:31: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:22:31: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:22:31: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:22:31:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:22:31:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:22:31:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:22:31:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:22:31:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:22:31:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:22:31:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:22:31:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:22:31:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:22:31:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:22:31:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:22:31:   requireStack: [
+2026-05-05 09:22:31:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:22:31:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:22:31:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:22:31:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:22:31:   ]
+2026-05-05 09:22:31: }
+2026-05-05 09:22:35: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:22:35: Require stack:
+2026-05-05 09:22:35: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:22:35: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:22:35: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:22:35: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:22:35:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:22:35:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:22:35:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:22:35:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:22:35:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:22:35:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:22:35:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:22:35:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:22:35:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:22:35:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:22:35:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:22:35:   requireStack: [
+2026-05-05 09:22:35:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:22:35:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:22:35:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:22:35:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:22:35:   ]
+2026-05-05 09:22:35: }
+2026-05-05 09:22:39: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:22:39: Require stack:
+2026-05-05 09:22:39: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:22:39: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:22:39: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:22:39: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:22:39:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:22:39:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:22:39:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:22:39:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:22:39:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:22:39:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:22:39:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:22:39:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:22:39:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:22:39:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:22:39:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:22:39:   requireStack: [
+2026-05-05 09:22:39:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:22:39:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:22:39:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:22:39:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:22:39:   ]
+2026-05-05 09:22:39: }
+2026-05-05 09:22:43: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:22:43: Require stack:
+2026-05-05 09:22:43: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:22:43: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:22:43: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:22:43: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:22:43:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:22:43:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:22:43:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:22:43:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:22:43:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:22:43:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:22:43:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:22:43:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:22:43:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:22:43:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:22:43:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:22:43:   requireStack: [
+2026-05-05 09:22:43:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:22:43:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:22:43:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:22:43:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:22:43:   ]
+2026-05-05 09:22:43: }
+2026-05-05 09:22:46: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:22:46: Require stack:
+2026-05-05 09:22:46: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:22:46: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:22:46: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:22:46: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:22:46:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:22:46:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:22:46:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:22:46:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:22:46:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:22:46:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:22:46:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:22:46:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:22:46:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:22:46:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:22:46:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:22:46:   requireStack: [
+2026-05-05 09:22:46:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:22:46:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:22:46:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:22:46:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:22:46:   ]
+2026-05-05 09:22:46: }
+2026-05-05 09:22:50: Error: Cannot find module '../../services/promozioni'
+2026-05-05 09:22:50: Require stack:
+2026-05-05 09:22:50: - /opt/pizzazen-backend/src/routes/pizzeria/ordini.js
+2026-05-05 09:22:50: - /opt/pizzazen-backend/src/routes/pizzeria/index.js
+2026-05-05 09:22:50: - /opt/pizzazen-backend/src/routes/index.js
+2026-05-05 09:22:50: - /opt/pizzazen-backend/src/app.js
+2026-05-05 09:22:50:     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+2026-05-05 09:22:50:     at Module._load (node:internal/modules/cjs/loader:1038:27)
+2026-05-05 09:22:50:     at Module.require (node:internal/modules/cjs/loader:1289:19)
+2026-05-05 09:22:50:     at require (node:internal/modules/helpers:182:18)
+2026-05-05 09:22:50:     at Object.<anonymous> (/opt/pizzazen-backend/src/routes/pizzeria/ordini.js:7:74)
+2026-05-05 09:22:50:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-05-05 09:22:50:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-05-05 09:22:50:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-05-05 09:22:50:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-05-05 09:22:50:     at Module.require (node:internal/modules/cjs/loader:1289:19) {
+2026-05-05 09:22:50:   code: 'MODULE_NOT_FOUND',
+2026-05-05 09:22:50:   requireStack: [
+2026-05-05 09:22:50:     '/opt/pizzazen-backend/src/routes/pizzeria/ordini.js',
+2026-05-05 09:22:50:     '/opt/pizzazen-backend/src/routes/pizzeria/index.js',
+2026-05-05 09:22:50:     '/opt/pizzazen-backend/src/routes/index.js',
+2026-05-05 09:22:50:     '/opt/pizzazen-backend/src/app.js'
+2026-05-05 09:22:50:   ]
+2026-05-05 09:22:50: }

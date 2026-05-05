@@ -404,3 +404,37 @@ error: terminating connection due to administrator command
 2026-05-05 09:52:39 [INFO] 🌍 Ambiente: production
 2026-05-05 09:52:39 [INFO] 📡 Health check: http://localhost:3000/health
 2026-05-05 09:52:39 [INFO] 🔌 Socket.io attivo
+2026-05-05 09:59:46 [INFO] ✅ Socket.io inizializzato
+2026-05-05 09:59:46 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-05 09:59:46 [INFO] ✅ PostgreSQL connesso — 2026-05-05 09:59:46.916863+02
+2026-05-05 09:59:46 [INFO] ✅ Redis connesso
+2026-05-05 09:59:46 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-05 09:59:46 [INFO] 🌍 Ambiente: production
+2026-05-05 09:59:46 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-05 09:59:46 [INFO] 🔌 Socket.io attivo
+2026-05-05 11:22:54 [INFO] ✅ Socket.io inizializzato
+2026-05-05 11:22:54 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-05 11:22:54 [INFO] ✅ PostgreSQL connesso — 2026-05-05 11:22:54.82689+02
+2026-05-05 11:22:54 [INFO] ✅ Redis connesso
+2026-05-05 11:22:54 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-05 11:22:54 [INFO] 🌍 Ambiente: production
+2026-05-05 11:22:54 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-05 11:22:54 [INFO] 🔌 Socket.io attivo
+2026-05-05 11:23:03 [INFO] ✅ Socket.io inizializzato
+2026-05-05 11:23:03 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-05 11:23:03 [INFO] ✅ PostgreSQL connesso — 2026-05-05 11:23:03.925479+02
+2026-05-05 11:23:03 [INFO] ✅ Redis connesso
+2026-05-05 11:23:03 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-05 11:23:03 [INFO] 🌍 Ambiente: production
+2026-05-05 11:23:03 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-05 11:23:03 [INFO] 🔌 Socket.io attivo
+2026-05-05 11:23:39 [INFO] Promozione creata: Delivery Gratis sopra 45 euro (pizzeria 1)
+2026-05-05 11:23:57 [INFO] Promozione creata: Sconto 10% con codice PROMO10 (pizzeria 1)
+2026-05-05 11:32:25 [INFO] ✅ Socket.io inizializzato
+2026-05-05 11:32:25 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-05 11:32:25 [INFO] ✅ PostgreSQL connesso — 2026-05-05 11:32:25.98213+02
+2026-05-05 11:32:25 [INFO] ✅ Redis connesso
+2026-05-05 11:32:25 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-05 11:32:25 [INFO] 🌍 Ambiente: production
+2026-05-05 11:32:25 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-05 11:32:25 [INFO] 🔌 Socket.io attivo

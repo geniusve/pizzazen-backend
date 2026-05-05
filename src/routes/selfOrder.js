@@ -243,6 +243,7 @@ router.post('/:slug/:codice/ordine', [
   body('articoli').isArray({ min: 1 }).withMessage('Almeno un articolo obbligatorio'),
   body('articoli.*.articolo_id').isInt({ min: 1 }).toInt(),
   body('articoli.*.quantita').isInt({ min: 1 }).toInt(),
+  body('codice_promo').optional().trim().toUpperCase(),
   body('cliente.nome').notEmpty().trim().withMessage('Nome obbligatorio'),
   body('cliente.cognome').notEmpty().trim().withMessage('Cognome obbligatorio'),
   body('cliente.cellulare').notEmpty().trim(),
@@ -260,7 +261,7 @@ router.post('/:slug/:codice/ordine', [
     if (result.errore) { await dbClient.query('ROLLBACK'); return notFound(res, 'Link non valido'); }
 
     const { pizzeria, cliente } = result;
-    const { tipo_ordine, slot_richiesto, articoli, note } = req.body;
+    const { tipo_ordine, slot_richiesto, articoli, note, codice_promo } = req.body;
     const datiCliente = req.body.cliente;
 
     // Verifica delivery abilitato
@@ -394,6 +395,53 @@ router.post('/:slug/:codice/ordine', [
       }
     }
 
+    // Applica codice promo e promozioni automatiche
+    let scontoPromo = 0;
+    const promoService = require('../../services/promozioni');
+
+    const ordinePerPromo = {
+      subtotale, costo_consegna: costoConsegna,
+      tipo_ordine: tipo_ordine === 'delivery' ? 'delivery' : 'self_order_web',
+      cliente_id: cliente.id,
+    };
+    const articoliPerPromo = articoliElaborati.map(a => ({
+      articolo_id: a.articolo_id, categoria_id: a.categoria_id || null,
+      quantita: a.quantita, prezzo_unitario: a.prezzo_unitario,
+    }));
+
+    const promozioniApplicate = [];
+
+    if (codice_promo) {
+      const promoCode = await promoService.valutaPromozioni(
+        pizzeria.id, ordinePerPromo, articoliPerPromo,
+        { codice: codice_promo, origine: 'selforder' }
+      );
+      if (promoCode.length > 0) promozioniApplicate.push(promoCode[0]);
+    }
+
+    const promoAuto = await promoService.valutaPromozioni(
+      pizzeria.id, ordinePerPromo, articoliPerPromo,
+      { soloAutomatiche: true, origine: 'selforder' }
+    );
+    promozioniApplicate.push(...promoAuto);
+
+    if (promozioniApplicate.length > 0) {
+      const { scontoTotale } = await promoService.applicaPromozioni(
+        dbClient, ordine.id, pizzeria.id, promozioniApplicate
+      );
+      scontoPromo = scontoTotale;
+      if (scontoPromo > 0) {
+        const nuovoTotale = Math.max(0, totale - scontoPromo);
+        await dbClient.query(
+          'UPDATE ordini SET sconto = $1, totale = $2 WHERE id = $3',
+          [scontoPromo.toFixed(2), nuovoTotale.toFixed(2), ordine.id]
+        );
+      }
+      for (const promo of promozioniApplicate) {
+        await promoService.registraUtilizzoCliente(dbClient, promo.promozione_id, cliente.id, ordine.id);
+      }
+    }
+
     await dbClient.query('COMMIT');
 
     // Notifica Socket.io al tablet — usa req.app.get('io') per evitare dipendenza circolare
@@ -408,14 +456,20 @@ router.post('/:slug/:codice/ordine', [
 
     logger.info(`Self-order #${numeroOrdine} — ${pizzeria.nome} — €${totale.toFixed(2)}`);
     const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
+    const totaleFinale = Math.max(0, totale - scontoPromo);
 
     return created(res, {
       ordine_id:       ordine.id,
       numero_ordine:   numeroOrdine,
-      totale:          totale.toFixed(2),
+      subtotale:       subtotale.toFixed(2),
       costo_consegna:  costoConsegna.toFixed(2),
+      sconto_promo:    scontoPromo.toFixed(2),
+      totale:          totaleFinale.toFixed(2),
       slot_richiesto,
       tipo_ordine,
+      promozioni_applicate: promozioniApplicate.map(p => ({
+        nome: p.nome, effetto: p.effetto.descrizione
+      })),
       chiave_tracking: ordine.chiave_tracking,
       link_tracking:   `${baseUrl}/api/v1/tracking/${ordine.chiave_tracking}`,
       messaggio:       `Ordine #${numeroOrdine} ricevuto! Ti aggiorneremo sullo stato.`

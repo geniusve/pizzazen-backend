@@ -4,6 +4,7 @@ const db      = require('../../config/database');
 const { validate }           = require('../../middleware/validate');
 const { ok, created, notFound, conflict, serverError, badRequest } = require('../../utils/response');
 const { notificaNuovoOrdine, notificaStatoOrdine } = require('../../socket');
+const { valutaPromozioni, applicaPromozioni, registraUtilizzoCliente } = require('../../services/promozioni');
 const logger  = require('../../utils/logger');
 
 // ═══════════════════════════════════════════════════════════════
@@ -207,6 +208,8 @@ router.post('/', [
   body('sconto').optional().isFloat({ min: 0 }).toFloat(),
   body('costo_consegna').optional().isFloat({ min: 0 }).toFloat(),
   body('servizi').optional().isFloat({ min: 0 }).toFloat(),
+  body('promozioni_ids').optional().isArray(),     // IDs promozioni manuali selezionate
+  body('codice_promo').optional().trim().toUpperCase(), // codice promo inserito
   validate
 ], async (req, res) => {
   const client = await db.pool.connect();
@@ -227,6 +230,8 @@ router.post('/', [
       servizi         = 0,
       tipo_pagamento,
       note,
+      promozioni_ids  = [],
+      codice_promo,
     } = req.body;
 
     // 1. Numero ordine progressivo giornaliero
@@ -372,6 +377,73 @@ router.post('/', [
          VALUES ($1, $2) ON CONFLICT DO NOTHING`,
         [cliente_id, pizzeriaId]
       );
+    }
+
+    // 7. Applica promozioni selezionate + codice promo
+    let scontoPromo = 0;
+    const promozioniApplicate = [];
+
+    // Prepara articoli per il motore promozioni
+    const articoliPerPromo = articoliElaborati.map(a => ({
+      articolo_id:     a.articolo_id,
+      categoria_id:    a.categoria_id || null,
+      quantita:        a.quantita,
+      prezzo_unitario: a.prezzo_unitario,
+    }));
+
+    const ordinePerPromo = {
+      subtotale,
+      costo_consegna: costoConsegnaFinale,
+      tipo_ordine,
+      cliente_id: cliente_id || null,
+    };
+
+    // Promozioni manuali selezionate dal cassiere
+    if (promozioni_ids.length > 0) {
+      const promoManuali = await valutaPromozioni(
+        pizzeriaId, ordinePerPromo, articoliPerPromo,
+        { soloManuali: true, origine: 'cassa' }
+      );
+      const selezionate = promoManuali.filter(p =>
+        promozioni_ids.includes(p.promozione_id)
+      );
+      promozioniApplicate.push(...selezionate);
+    }
+
+    // Codice promo
+    if (codice_promo) {
+      const promoCode = await valutaPromozioni(
+        pizzeriaId, ordinePerPromo, articoliPerPromo,
+        { codice: codice_promo, origine: 'cassa' }
+      );
+      if (promoCode.length > 0) promozioniApplicate.push(promoCode[0]);
+    }
+
+    // Promozioni automatiche
+    const promoAuto = await valutaPromozioni(
+      pizzeriaId, ordinePerPromo, articoliPerPromo,
+      { soloAutomatiche: true, origine: 'cassa' }
+    );
+    promozioniApplicate.push(...promoAuto);
+
+    // Applica le promozioni e aggiorna l'ordine
+    if (promozioniApplicate.length > 0) {
+      const { scontoTotale } = await applicaPromozioni(
+        client, ordine.id, pizzeriaId, promozioniApplicate
+      );
+      scontoPromo = scontoTotale;
+
+      // Aggiorna sconto e totale ordine
+      const nuovoTotale = Math.max(0, totale - scontoPromo);
+      await client.query(
+        `UPDATE ordini SET sconto = $1, totale = $2 WHERE id = $3`,
+        [(sconto + scontoPromo).toFixed(2), nuovoTotale.toFixed(2), ordine.id]
+      );
+
+      // Registra utilizzi per cliente
+      for (const promo of promozioniApplicate) {
+        await registraUtilizzoCliente(client, promo.promozione_id, cliente_id, ordine.id);
+      }
     }
 
     await client.query('COMMIT');
@@ -591,10 +663,7 @@ router.post('/:id/stampa', [
               c.cellulare AS cliente_cellulare,
               c.via AS cliente_via, c.citta AS cliente_citta,
               p.nome AS pizzeria_nome,
-              TRIM(CONCAT_WS(', ',
-                NULLIF(TRIM(CONCAT(COALESCE(p.via,''), ' ', COALESCE(p.numero_civico,''))), ''),
-                NULLIF(TRIM(CONCAT(COALESCE(p.cap,''), ' ', COALESCE(p.citta,''))), '')
-              )) AS pizzeria_indirizzo,
+              CONCAT(p.via, ' ', p.numero_civico, ', ', p.cap, ' ', p.citta) AS pizzeria_indirizzo,
               p.telefono AS pizzeria_telefono,
               p.stampa_intestazione,
               p.stampa_logo_url,

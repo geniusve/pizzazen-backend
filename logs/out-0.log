@@ -415,3 +415,47 @@
 2026-05-05 07:52:39: 2026-05-05 09:52:39 [32minfo[39m: 🌍 Ambiente: production
 2026-05-05 07:52:39: 2026-05-05 09:52:39 [32minfo[39m: 📡 Health check: http://localhost:3000/health
 2026-05-05 07:52:39: 2026-05-05 09:52:39 [32minfo[39m: 🔌 Socket.io attivo
+2026-05-05 07:59:46: 2026-05-05 09:59:46 [32minfo[39m: ✅ Socket.io inizializzato
+2026-05-05 07:59:46: 2026-05-05 09:59:46 [32minfo[39m: 🍕 Avvio PizzaZen Backend...
+2026-05-05 07:59:46: 2026-05-05 09:59:46 [32minfo[39m: ✅ PostgreSQL connesso — 2026-05-05 09:59:46.916863+02
+2026-05-05 07:59:46: 2026-05-05 09:59:46 [32minfo[39m: ✅ Redis connesso
+2026-05-05 07:59:46: 2026-05-05 09:59:46 [32minfo[39m: ✅ Server in ascolto su porta 3000
+2026-05-05 07:59:46: 2026-05-05 09:59:46 [32minfo[39m: 🌍 Ambiente: production
+2026-05-05 07:59:46: 2026-05-05 09:59:46 [32minfo[39m: 📡 Health check: http://localhost:3000/health
+2026-05-05 07:59:46: 2026-05-05 09:59:46 [32minfo[39m: 🔌 Socket.io attivo
+2026-05-05 09:22:54: 2026-05-05 11:22:54 [32minfo[39m: ✅ Socket.io inizializzato
+2026-05-05 09:22:54: 2026-05-05 11:22:54 [32minfo[39m: 🍕 Avvio PizzaZen Backend...
+2026-05-05 09:22:54: 2026-05-05 11:22:54 [32minfo[39m: ✅ PostgreSQL connesso — 2026-05-05 11:22:54.82689+02
+2026-05-05 09:22:54: 2026-05-05 11:22:54 [32minfo[39m: ✅ Redis connesso
+2026-05-05 09:22:54: 2026-05-05 11:22:54 [32minfo[39m: ✅ Server in ascolto su porta 3000
+2026-05-05 09:22:54: 2026-05-05 11:22:54 [32minfo[39m: 🌍 Ambiente: production
+2026-05-05 09:22:54: 2026-05-05 11:22:54 [32minfo[39m: 📡 Health check: http://localhost:3000/health
+2026-05-05 09:22:54: 2026-05-05 11:22:54 [32minfo[39m: 🔌 Socket.io attivo
+2026-05-05 09:23:03: 2026-05-05 11:23:03 [32minfo[39m: ✅ Socket.io inizializzato
+2026-05-05 09:23:03: 2026-05-05 11:23:03 [32minfo[39m: 🍕 Avvio PizzaZen Backend...
+2026-05-05 09:23:03: 2026-05-05 11:23:03 [32minfo[39m: ✅ PostgreSQL connesso — 2026-05-05 11:23:03.925479+02
+2026-05-05 09:23:03: 2026-05-05 11:23:03 [32minfo[39m: ✅ Redis connesso
+2026-05-05 09:23:03: 2026-05-05 11:23:03 [32minfo[39m: ✅ Server in ascolto su porta 3000
+2026-05-05 09:23:03: 2026-05-05 11:23:03 [32minfo[39m: 🌍 Ambiente: production
+2026-05-05 09:23:03: 2026-05-05 11:23:03 [32minfo[39m: 📡 Health check: http://localhost:3000/health
+2026-05-05 09:23:03: 2026-05-05 11:23:03 [32minfo[39m: 🔌 Socket.io attivo
+2026-05-05 09:23:05: 127.0.0.1 - - [05/May/2026:09:23:05 +0000] "GET /health HTTP/1.1" 200 123 "-" "curl/7.81.0"
+2026-05-05 09:23:31: 127.0.0.1 - - [05/May/2026:09:23:31 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 421 "-" "curl/7.81.0"
+2026-05-05 09:23:39: 2026-05-05 11:23:39 [32minfo[39m: Promozione creata: Delivery Gratis sopra 45 euro (pizzeria 1)
+2026-05-05 09:23:39: 127.0.0.1 - - [05/May/2026:09:23:39 +0000] "POST /api/v1/pizzeria/promozioni HTTP/1.1" 201 663 "-" "curl/7.81.0"
+2026-05-05 09:23:57: 2026-05-05 11:23:57 [32minfo[39m: Promozione creata: Sconto 10% con codice PROMO10 (pizzeria 1)
+2026-05-05 09:23:57: 127.0.0.1 - - [05/May/2026:09:23:57 +0000] "POST /api/v1/pizzeria/promozioni HTTP/1.1" 201 634 "-" "curl/7.81.0"
+2026-05-05 09:24:01: 127.0.0.1 - - [05/May/2026:09:24:01 +0000] "GET /api/v1/pizzeria/promozioni/valuta?subtotale=50&tipo_ordine=delivery&costo_consegna=3 HTTP/1.1" 422 157 "-" "curl/7.81.0"
+2026-05-05 09:32:25: 2026-05-05 11:32:25 [32minfo[39m: ✅ Socket.io inizializzato
+2026-05-05 09:32:25: 2026-05-05 11:32:25 [32minfo[39m: 🍕 Avvio PizzaZen Backend...
+2026-05-05 09:32:25: 2026-05-05 11:32:25 [32minfo[39m: ✅ PostgreSQL connesso — 2026-05-05 11:32:25.98213+02
+2026-05-05 09:32:25: 2026-05-05 11:32:25 [32minfo[39m: ✅ Redis connesso
+2026-05-05 09:32:25: 2026-05-05 11:32:25 [32minfo[39m: ✅ Server in ascolto su porta 3000
+2026-05-05 09:32:25: 2026-05-05 11:32:25 [32minfo[39m: 🌍 Ambiente: production
+2026-05-05 09:32:25: 2026-05-05 11:32:25 [32minfo[39m: 📡 Health check: http://localhost:3000/health
+2026-05-05 09:32:25: 2026-05-05 11:32:25 [32minfo[39m: 🔌 Socket.io attivo
+2026-05-05 09:32:52: 127.0.0.1 - - [05/May/2026:09:32:52 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 421 "-" "curl/7.81.0"
+2026-05-05 09:32:55: 127.0.0.1 - - [05/May/2026:09:32:55 +0000] "GET /api/v1/pizzeria/promozioni/valuta?subtotale=50&tipo_ordine=delivery&costo_consegna=3 HTTP/1.1" 200 313 "-" "curl/7.81.0"
+2026-05-05 09:33:04: 127.0.0.1 - - [05/May/2026:09:33:04 +0000] "POST /api/v1/pizzeria/promozioni/valida-codice HTTP/1.1" 200 288 "-" "curl/7.81.0"
+2026-05-05 09:33:31: 127.0.0.1 - - [05/May/2026:09:33:31 +0000] "GET /api/v1/pizzeria/promozioni HTTP/1.1" 200 1095 "-" "curl/7.81.0"
+2026-05-05 09:33:34: 127.0.0.1 - - [05/May/2026:09:33:34 +0000] "GET /api/v1/pizzeria/promozioni/valuta?subtotale=30&tipo_ordine=delivery&costo_consegna=3 HTTP/1.1" 200 70 "-" "curl/7.81.0"
