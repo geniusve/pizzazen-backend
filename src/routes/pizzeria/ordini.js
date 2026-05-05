@@ -469,7 +469,7 @@ router.patch('/:id/stato', [
 
       if (numeroCliente) {
         try {
-          const { mandaNotificaOrdine } = require('./whatsapp');
+          const { mandaNotificaOrdine } = require('../whatsapp');
           const inviato = await mandaNotificaOrdine(
             pizzeriaId, numeroCliente, messaggiStato[stato]
           );
@@ -590,14 +590,19 @@ router.post('/:id/stampa', [
               c.nome AS cliente_nome, c.cognome AS cliente_cognome,
               c.cellulare AS cliente_cellulare,
               c.via AS cliente_via, c.citta AS cliente_citta,
-              p.nome AS pizzeria_nome, p.indirizzo_completo
+              p.nome AS pizzeria_nome,
+              TRIM(CONCAT_WS(', ',
+                NULLIF(TRIM(CONCAT(COALESCE(p.via,''), ' ', COALESCE(p.numero_civico,''))), ''),
+                NULLIF(TRIM(CONCAT(COALESCE(p.cap,''), ' ', COALESCE(p.citta,''))), '')
+              )) AS pizzeria_indirizzo,
+              p.telefono AS pizzeria_telefono,
+              p.stampa_intestazione,
+              p.stampa_logo_url,
+              p.stampante_cassa_ip, p.stampante_cassa_porta,
+              p.stampante_cucina_ip, p.stampante_cucina_porta
        FROM ordini o
        LEFT JOIN clienti c ON c.id = o.cliente_id
-       JOIN (
-         SELECT id, nome,
-                CONCAT(via, ' ', numero_civico, ', ', cap, ' ', citta) AS indirizzo_completo
-         FROM pizzerie
-       ) p ON p.id = o.pizzeria_id
+       JOIN pizzerie p ON p.id = o.pizzeria_id
        WHERE o.id = $1 AND o.pizzeria_id = $2`,
       [req.params.id, pizzeriaId]
     );
@@ -621,24 +626,44 @@ router.post('/:id/stampa', [
       [req.params.id]
     );
 
+    const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
+    const o       = ordine.rows[0];
+
     // Struttura dati ottimizzata per la stampante termica
     const datiStampa = {
       tipo:         req.body.tipo,
       timestamp:    new Date().toISOString(),
-      pizzeria:     ordine.rows[0].pizzeria_nome,
+      pizzeria: {
+        nome:             o.pizzeria_nome,
+        indirizzo:        o.pizzeria_indirizzo,
+        telefono:         o.pizzeria_telefono,
+        stampa_intestazione: o.stampa_intestazione,
+        stampa_logo_url:  o.stampa_logo_url
+          ? `${baseUrl}/storage/${o.stampa_logo_url}`
+          : `${baseUrl}/storage/defaults/placeholder/logo-default.png`,
+      },
+      // IP stampante per il frontend
+      stampante: {
+        ip:    req.body.tipo === 'cassa'
+          ? o.stampante_cassa_ip
+          : o.stampante_cucina_ip,
+        porta: req.body.tipo === 'cassa'
+          ? (o.stampante_cassa_porta || 8008)
+          : (o.stampante_cucina_porta || 8008),
+      },
       ordine: {
-        numero:     ordine.rows[0].numero_ordine,
-        data:       ordine.rows[0].data_ordine,
-        ora:        ordine.rows[0].ora_ordine,
-        tipo:       ordine.rows[0].tipo_ordine,
-        slot:       ordine.rows[0].slot_richiesto,
-        note:       ordine.rows[0].note,
+        numero:     o.numero_ordine,
+        data:       o.data_ordine,
+        ora:        o.ora_ordine,
+        tipo:       o.tipo_ordine,
+        slot:       o.slot_richiesto,
+        note:       o.note,
       },
       cliente: {
-        nome:     ordine.rows[0].cliente_nome || ordine.rows[0].nome_cliente_temp,
-        telefono: ordine.rows[0].cliente_cellulare || ordine.rows[0].telefono_temp,
-        via:      ordine.rows[0].cliente_via,
-        citta:    ordine.rows[0].cliente_citta,
+        nome:     o.cliente_nome || o.nome_cliente_temp,
+        telefono: o.cliente_cellulare || o.telefono_temp,
+        via:      o.cliente_via,
+        citta:    o.cliente_citta,
       },
       articoli: articoli.rows,
     };
@@ -646,13 +671,13 @@ router.post('/:id/stampa', [
     // Per la cassa aggiungi i totali
     if (req.body.tipo === 'cassa') {
       datiStampa.totali = {
-        subtotale:      ordine.rows[0].subtotale,
-        sconto:         ordine.rows[0].sconto,
-        costo_consegna: ordine.rows[0].costo_consegna,
-        servizi:        ordine.rows[0].servizi,
-        totale:         ordine.rows[0].totale,
-        pagamento:      ordine.rows[0].tipo_pagamento,
-        stato_pagamento:ordine.rows[0].stato_pagamento,
+        subtotale:       o.subtotale,
+        sconto:          o.sconto,
+        costo_consegna:  o.costo_consegna,
+        servizi:         o.servizi,
+        totale:          o.totale,
+        pagamento:       o.tipo_pagamento,
+        stato_pagamento: o.stato_pagamento,
       };
     }
 

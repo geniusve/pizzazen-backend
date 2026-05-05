@@ -388,3 +388,19 @@ error: terminating connection due to administrator command
 2026-05-05 08:59:40 [INFO] ✅ Ordine #2 creato — pizzeria 1 — €8.00
 2026-05-05 09:00:19 [INFO] ✅ Ordine #3 creato — pizzeria 1 — €8.00
 2026-05-05 09:00:19 [WARN] WA notifica fallita ordine 8:
+2026-05-05 09:23:30 [INFO] ✅ Socket.io inizializzato
+2026-05-05 09:23:30 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-05 09:23:31 [INFO] ✅ PostgreSQL connesso — 2026-05-05 09:23:31.004434+02
+2026-05-05 09:23:31 [INFO] ✅ Redis connesso
+2026-05-05 09:23:31 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-05 09:23:31 [INFO] 🌍 Ambiente: production
+2026-05-05 09:23:31 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-05 09:23:31 [INFO] 🔌 Socket.io attivo
+2026-05-05 09:52:39 [INFO] ✅ Socket.io inizializzato
+2026-05-05 09:52:39 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-05 09:52:39 [INFO] ✅ PostgreSQL connesso — 2026-05-05 09:52:39.26618+02
+2026-05-05 09:52:39 [INFO] ✅ Redis connesso
+2026-05-05 09:52:39 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-05 09:52:39 [INFO] 🌍 Ambiente: production
+2026-05-05 09:52:39 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-05 09:52:39 [INFO] 🔌 Socket.io attivo

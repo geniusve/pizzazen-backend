@@ -96,16 +96,21 @@ router.post('/', [
         telefono, cellulare, nome_titolare, telefono_titolare,
         tipo_pizzeria, note, descrizione, slot_minuti, slot_max_pizze,
         delivery_attivo, delivery_costo_tipo, delivery_costo, delivery_note,
-        selforder_attivo, slug
+        selforder_attivo, slug, stampa_intestazione
       ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,
-                $17,$18,$19,$20,$21,$22,$23,$24,$25,$26,$27)
+                $17,$18,$19,$20,$21,$22,$23,$24,$25,$26,$27,$28)
       RETURNING id, nome, slug`,
       [nome, ragione_sociale, partita_iva, codice_sdi, pec, email,
        via, numero_civico, cap, citta, provincia, nazione||'Italia',
        telefono, cellulare, nome_titolare, telefono_titolare,
        tipo_pizzeria, note, descrizione, slot_minuti, slot_max_pizze,
        delivery_attivo, delivery_costo_tipo, delivery_costo, delivery_note||null,
-       selforder_attivo, slug]
+       selforder_attivo, slug,
+       // Intestazione stampa generata automaticamente
+       [nome, [via, numero_civico].filter(Boolean).join(' '),
+        [cap, citta].filter(Boolean).join(' '), telefono]
+         .filter(Boolean).join('\n')
+      ]
     );
     const pizzeria = pizzeriaRes.rows[0];
 
