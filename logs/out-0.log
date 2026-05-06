@@ -553,3 +553,27 @@
 2026-05-06 10:49:31: 192.168.1.152 - - [06/May/2026:10:49:31 +0000] "GET /api/v1/admin/pizzerie/1 HTTP/1.1" 304 - "http://192.168.1.160:5174/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"
 2026-05-06 10:53:44: 192.168.1.152 - - [06/May/2026:10:53:44 +0000] "GET /api/v1/admin/pizzerie/1 HTTP/1.1" 304 - "http://192.168.1.160:5174/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"
 2026-05-06 12:30:29: 192.168.1.152 - - [06/May/2026:12:30:29 +0000] "GET /api/v1/admin/pizzerie/1 HTTP/1.1" 304 - "http://192.168.1.160:5174/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"
+2026-05-06 12:35:07: 192.168.1.152 - - [06/May/2026:12:35:07 +0000] "GET /api/v1/admin/pizzerie/1 HTTP/1.1" 304 - "http://192.168.1.160:5174/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"
+2026-05-06 12:40:23: 192.168.1.152 - - [06/May/2026:12:40:23 +0000] "GET /api/v1/admin/pizzerie/1 HTTP/1.1" 304 - "http://192.168.1.160:5174/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Safari/605.1.15"
+2026-05-06 12:40:25: 192.168.1.152 - - [06/May/2026:12:40:25 +0000] "GET /api/v1/admin/pizzerie?cerca= HTTP/1.1" 200 580 "http://192.168.1.160:5174/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Safari/605.1.15"
+2026-05-06 12:40:27: 192.168.1.152 - - [06/May/2026:12:40:27 +0000] "GET /api/v1/admin/pizzerie/1/utenti HTTP/1.1" 404 102 "http://192.168.1.160:5174/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Safari/605.1.15"
+2026-05-06 12:40:28: 192.168.1.152 - - [06/May/2026:12:40:28 +0000] "GET /api/v1/admin/pizzerie/1/utenti HTTP/1.1" 404 102 "http://192.168.1.160:5174/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Safari/605.1.15"
+2026-05-06 12:40:37: 192.168.1.152 - - [06/May/2026:12:40:37 +0000] "GET /api/v1/admin/pizzerie/1/utenti HTTP/1.1" 404 102 "http://192.168.1.160:5174/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Safari/605.1.15"
+2026-05-06 12:40:38: 192.168.1.152 - - [06/May/2026:12:40:38 +0000] "GET /api/v1/admin/pizzerie/1/utenti HTTP/1.1" 404 102 "http://192.168.1.160:5174/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Safari/605.1.15"
+2026-05-06 12:41:15: 192.168.1.152 - - [06/May/2026:12:41:15 +0000] "POST /api/v1/admin/pizzerie/1/utenti HTTP/1.1" 404 103 "http://192.168.1.160:5174/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Safari/605.1.15"
+2026-05-06 12:43:13: 2026-05-06 14:43:13 [32minfo[39m: ✅ Socket.io inizializzato
+2026-05-06 12:43:14: 2026-05-06 14:43:14 [32minfo[39m: 🍕 Avvio PizzaZen Backend...
+2026-05-06 12:43:14: 2026-05-06 14:43:14 [32minfo[39m: ✅ PostgreSQL connesso — 2026-05-06 14:43:14.056062+02
+2026-05-06 12:43:14: 2026-05-06 14:43:14 [32minfo[39m: ✅ Redis connesso
+2026-05-06 12:43:14: 2026-05-06 14:43:14 [32minfo[39m: ✅ Server in ascolto su porta 3000
+2026-05-06 12:43:14: 2026-05-06 14:43:14 [32minfo[39m: 🌍 Ambiente: production
+2026-05-06 12:43:14: 2026-05-06 14:43:14 [32minfo[39m: 📡 Health check: http://localhost:3000/health
+2026-05-06 12:43:14: 2026-05-06 14:43:14 [32minfo[39m: 🔌 Socket.io attivo
+2026-05-06 12:43:17: 127.0.0.1 - - [06/May/2026:12:43:17 +0000] "POST /api/v1/auth/admin/login HTTP/1.1" 200 280 "-" "curl/7.81.0"
+2026-05-06 12:43:17: 127.0.0.1 - - [06/May/2026:12:43:17 +0000] "GET /api/v1/admin/pizzerie/1/utenti HTTP/1.1" 200 298 "-" "curl/7.81.0"
+2026-05-06 12:43:41: 192.168.1.152 - - [06/May/2026:12:43:41 +0000] "GET /api/v1/admin/pizzerie/1 HTTP/1.1" 304 - "http://192.168.1.160:5174/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Safari/605.1.15"
+2026-05-06 12:43:41: 192.168.1.152 - - [06/May/2026:12:43:41 +0000] "GET /api/v1/admin/pizzerie/1/utenti HTTP/1.1" 200 298 "http://192.168.1.160:5174/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Safari/605.1.15"
+2026-05-06 12:43:42: 192.168.1.152 - - [06/May/2026:12:43:42 +0000] "GET /api/v1/admin/pizzerie?cerca= HTTP/1.1" 304 - "http://192.168.1.160:5174/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Safari/605.1.15"
+2026-05-06 12:44:04: 192.168.1.152 - - [06/May/2026:12:44:04 +0000] "POST /api/v1/admin/pizzerie/1/utenti HTTP/1.1" 201 120 "http://192.168.1.160:5174/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Safari/605.1.15"
+2026-05-06 12:44:04: 192.168.1.152 - - [06/May/2026:12:44:04 +0000] "GET /api/v1/admin/pizzerie/1/utenti HTTP/1.1" 200 552 "http://192.168.1.160:5174/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Safari/605.1.15"
+2026-05-06 12:44:04: 192.168.1.152 - - [06/May/2026:12:44:04 +0000] "GET /api/v1/admin/pizzerie/1 HTTP/1.1" 200 1661 "http://192.168.1.160:5174/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Safari/605.1.15"
