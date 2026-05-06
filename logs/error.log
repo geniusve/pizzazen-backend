@@ -14,3 +14,38 @@ error: terminating connection due to administrator command
     at TCP.onStreamRead (node:internal/stream_base_commons:191:23)
 2026-05-02 16:08:12 [ERROR] Redis error:
 2026-05-02 16:08:12 [ERROR] Redis error:
+2026-05-06 21:43:30 [ERROR] DELETE admin/ingredienti: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+error: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+    at /opt/pizzazen-backend/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /opt/pizzazen-backend/src/routes/admin/ingredienti.js:87:20
+2026-05-06 21:44:25 [ERROR] DELETE admin/ingredienti: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+error: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+    at /opt/pizzazen-backend/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /opt/pizzazen-backend/src/routes/admin/ingredienti.js:87:20
+2026-05-06 21:44:30 [ERROR] DELETE admin/ingredienti: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+error: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+    at /opt/pizzazen-backend/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /opt/pizzazen-backend/src/routes/admin/ingredienti.js:87:20
+2026-05-06 21:44:42 [ERROR] DELETE admin/ingredienti: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+error: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+    at /opt/pizzazen-backend/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /opt/pizzazen-backend/src/routes/admin/ingredienti.js:87:20
+2026-05-06 21:46:02 [ERROR] DELETE admin/ingredienti: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+error: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+    at /opt/pizzazen-backend/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /opt/pizzazen-backend/src/routes/admin/ingredienti.js:87:20
+2026-05-06 21:46:14 [ERROR] DELETE admin/ingredienti: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+error: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+    at /opt/pizzazen-backend/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /opt/pizzazen-backend/src/routes/admin/ingredienti.js:87:20
+2026-05-06 21:47:14 [ERROR] DELETE admin/ingredienti: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+error: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+    at /opt/pizzazen-backend/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /opt/pizzazen-backend/src/routes/admin/ingredienti.js:87:20

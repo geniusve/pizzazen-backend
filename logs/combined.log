@@ -486,3 +486,46 @@ error: terminating connection due to administrator command
 2026-05-06 21:18:18 [INFO] 🌍 Ambiente: production
 2026-05-06 21:18:18 [INFO] 📡 Health check: http://localhost:3000/health
 2026-05-06 21:18:18 [INFO] 🔌 Socket.io attivo
+2026-05-06 21:43:24 [INFO] ✅ Socket.io inizializzato
+2026-05-06 21:43:24 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-06 21:43:24 [INFO] ✅ PostgreSQL connesso — 2026-05-06 21:43:24.704368+02
+2026-05-06 21:43:24 [INFO] ✅ Redis connesso
+2026-05-06 21:43:24 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-06 21:43:24 [INFO] 🌍 Ambiente: production
+2026-05-06 21:43:24 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-06 21:43:24 [INFO] 🔌 Socket.io attivo
+2026-05-06 21:43:30 [ERROR] DELETE admin/ingredienti: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+error: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+    at /opt/pizzazen-backend/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /opt/pizzazen-backend/src/routes/admin/ingredienti.js:87:20
+2026-05-06 21:44:25 [ERROR] DELETE admin/ingredienti: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+error: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+    at /opt/pizzazen-backend/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /opt/pizzazen-backend/src/routes/admin/ingredienti.js:87:20
+2026-05-06 21:44:30 [ERROR] DELETE admin/ingredienti: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+error: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+    at /opt/pizzazen-backend/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /opt/pizzazen-backend/src/routes/admin/ingredienti.js:87:20
+2026-05-06 21:44:42 [ERROR] DELETE admin/ingredienti: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+error: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+    at /opt/pizzazen-backend/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /opt/pizzazen-backend/src/routes/admin/ingredienti.js:87:20
+2026-05-06 21:46:02 [ERROR] DELETE admin/ingredienti: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+error: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+    at /opt/pizzazen-backend/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /opt/pizzazen-backend/src/routes/admin/ingredienti.js:87:20
+2026-05-06 21:46:14 [ERROR] DELETE admin/ingredienti: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+error: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+    at /opt/pizzazen-backend/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /opt/pizzazen-backend/src/routes/admin/ingredienti.js:87:20
+2026-05-06 21:47:14 [ERROR] DELETE admin/ingredienti: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+error: update or delete on table "ingredienti_default" violates foreign key constraint "ingredienti_ingrediente_default_id_fkey" on table "ingredienti"
+    at /opt/pizzazen-backend/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /opt/pizzazen-backend/src/routes/admin/ingredienti.js:87:20

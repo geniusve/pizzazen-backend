@@ -85,12 +85,11 @@ router.delete('/:id', [
 ], async (req, res) => {
   try {
     const result = await db.query(
-      `UPDATE ingredienti_default SET attivo = false
-       WHERE id = $1 RETURNING id, descrizione`,
+      `DELETE FROM ingredienti_default WHERE id = $1 RETURNING id, descrizione`,
       [req.params.id]
     );
     if (!result.rows[0]) return notFound(res, 'Ingrediente non trovato');
-    return ok(res, result.rows[0], 'Ingrediente disattivato');
+    return ok(res, result.rows[0], 'Ingrediente eliminato');
   } catch (err) {
     logger.error('DELETE admin/ingredienti:', err);
     return serverError(res);
