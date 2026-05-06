@@ -132,6 +132,7 @@ router.post('/:id/reset-password', [
 });
 
 // ─── DELETE /admin/pizzerie/:pizzeriaId/utenti/:id ────────────
+// Disattiva utente (soft delete - attivo = false)
 router.delete('/:id', [
   param('id').isInt({ min: 1 }).toInt(),
   validate
@@ -146,7 +147,48 @@ router.delete('/:id', [
     if (!result.rows[0]) return notFound(res, 'Utente non trovato');
     return ok(res, result.rows[0], 'Utente disattivato');
   } catch (err) {
-    logger.error('DELETE utente pizzeria:', err);
+    logger.error('DELETE disattiva utente:', err);
+    return serverError(res);
+  }
+});
+
+// ─── PATCH /admin/pizzerie/:pizzeriaId/utenti/:id/riattiva ────
+router.patch('/:id/riattiva', [
+  param('id').isInt({ min: 1 }).toInt(),
+  validate
+], async (req, res) => {
+  try {
+    const result = await db.query(
+      `UPDATE utenti SET attivo = true
+       WHERE id = $1 AND pizzeria_id = $2
+       RETURNING id, username`,
+      [req.params.id, req.params.pizzeriaId]
+    );
+    if (!result.rows[0]) return notFound(res, 'Utente non trovato');
+    return ok(res, result.rows[0], 'Utente riattivato');
+  } catch (err) {
+    logger.error('PATCH riattiva utente:', err);
+    return serverError(res);
+  }
+});
+
+// ─── DELETE /admin/pizzerie/:pizzeriaId/utenti/:id/elimina ────
+// Eliminazione fisica dal database
+router.delete('/:id/elimina', [
+  param('id').isInt({ min: 1 }).toInt(),
+  validate
+], async (req, res) => {
+  try {
+    const result = await db.query(
+      `DELETE FROM utenti
+       WHERE id = $1 AND pizzeria_id = $2
+       RETURNING id, username`,
+      [req.params.id, req.params.pizzeriaId]
+    );
+    if (!result.rows[0]) return notFound(res, 'Utente non trovato');
+    return ok(res, result.rows[0], 'Utente eliminato definitivamente');
+  } catch (err) {
+    logger.error('DELETE elimina utente:', err);
     return serverError(res);
   }
 });
