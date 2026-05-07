@@ -29,7 +29,8 @@ router.get('/', [
               tipo_pizzeria, attiva, logo_url, nome_titolare, email,
               created_at, slot_minuti, slot_max_pizze,
               delivery_attivo, delivery_costo_tipo, delivery_costo,
-              selforder_attivo, descrizione
+              selforder_attivo, descrizione,
+              commissione_percentuale, commissione_fissa, commissione_mensile
        FROM pizzerie ${whereClause} ORDER BY nome ASC LIMIT $${idx} OFFSET $${idx+1}`,
       [...params, perPagina, offset]
     );
@@ -67,6 +68,9 @@ router.post('/', [
   body('delivery_note').optional().trim(),
   body('selforder_attivo').optional().isBoolean().toBoolean(),
   body('descrizione').optional().trim(),
+  body('commissione_percentuale').optional().isFloat({ min: 0 }).toFloat(),
+  body('commissione_fissa').optional().isFloat({ min: 0 }).toFloat(),
+  body('commissione_mensile').optional().isFloat({ min: 0 }).toFloat(),
   body('admin_username').notEmpty().trim().withMessage('Username admin obbligatorio'),
   body('admin_password').isLength({ min: 6 }).withMessage('Password min 6 caratteri'),
   body('admin_email').optional({ nullable: true }).isEmail(),
@@ -84,6 +88,9 @@ router.post('/', [
       delivery_attivo = false, delivery_costo_tipo = 'per_ordine',
       delivery_costo = 0, delivery_note,
       selforder_attivo = true,
+      commissione_percentuale = 1.00,
+      commissione_fissa = 0.00,
+      commissione_mensile = 0.00,
       admin_username, admin_password, admin_email, admin_nome
     } = req.body;
 
@@ -96,9 +103,10 @@ router.post('/', [
         telefono, cellulare, nome_titolare, telefono_titolare,
         tipo_pizzeria, note, descrizione, slot_minuti, slot_max_pizze,
         delivery_attivo, delivery_costo_tipo, delivery_costo, delivery_note,
-        selforder_attivo, slug, stampa_intestazione
+        selforder_attivo, slug, stampa_intestazione,
+        commissione_percentuale, commissione_fissa, commissione_mensile
       ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,
-                $17,$18,$19,$20,$21,$22,$23,$24,$25,$26,$27,$28)
+                $17,$18,$19,$20,$21,$22,$23,$24,$25,$26,$27,$28,$29,$30,$31)
       RETURNING id, nome, slug`,
       [nome, ragione_sociale, partita_iva, codice_sdi, pec, email,
        via, numero_civico, cap, citta, provincia, nazione||'Italia',
@@ -106,10 +114,10 @@ router.post('/', [
        tipo_pizzeria, note, descrizione, slot_minuti, slot_max_pizze,
        delivery_attivo, delivery_costo_tipo, delivery_costo, delivery_note||null,
        selforder_attivo, slug,
-       // Intestazione stampa generata automaticamente
        [nome, [via, numero_civico].filter(Boolean).join(' '),
         [cap, citta].filter(Boolean).join(' '), telefono]
-         .filter(Boolean).join('\n')
+         .filter(Boolean).join('\n'),
+       commissione_percentuale, commissione_fissa, commissione_mensile
       ]
     );
     const pizzeria = pizzeriaRes.rows[0];
@@ -136,7 +144,7 @@ router.post('/', [
 
     await client.query('COMMIT');
     logger.info(`Pizzeria creata: ${pizzeria.nome} (id:${pizzeria.id})`);
-    return created(res, { id: pizzeria.id, nome: pizzeria.nome, slug: pizzeria.slug, admin_username, messaggio: 'Pizzeria creata. Ingredienti clonati. Admin creato.' });
+    return created(res, { id: pizzeria.id, nome: pizzeria.nome, slug: pizzeria.slug, admin_username });
   } catch (err) {
     await client.query('ROLLBACK');
     logger.error('POST /admin/pizzerie:', err);
@@ -154,6 +162,9 @@ router.put('/:id', [
   body('delivery_costo_tipo').optional().isIn(['per_ordine','per_pizza']),
   body('delivery_costo').optional().isFloat({ min: 0 }).toFloat(),
   body('selforder_attivo').optional().isBoolean().toBoolean(),
+  body('commissione_percentuale').optional().isFloat({ min: 0 }).toFloat(),
+  body('commissione_fissa').optional().isFloat({ min: 0 }).toFloat(),
+  body('commissione_mensile').optional().isFloat({ min: 0 }).toFloat(),
   validate
 ], async (req, res) => {
   try {
@@ -167,7 +178,8 @@ router.put('/:id', [
       'telefono','cellulare','nome_titolare','telefono_titolare',
       'tipo_pizzeria','note','descrizione','slot_minuti','slot_max_pizze',
       'delivery_attivo','delivery_costo_tipo','delivery_costo','delivery_note',
-      'selforder_attivo','wa_numero'
+      'selforder_attivo','wa_numero',
+      'commissione_percentuale','commissione_fissa','commissione_mensile',
     ];
     const sets = [], params = [];
     let idx = 1;
