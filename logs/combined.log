@@ -537,3 +537,59 @@ error: update or delete on table "ingredienti_default" violates foreign key cons
 2026-05-07 09:02:02 [INFO] 🌍 Ambiente: production
 2026-05-07 09:02:02 [INFO] 📡 Health check: http://localhost:3000/health
 2026-05-07 09:02:02 [INFO] 🔌 Socket.io attivo
+2026-05-07 14:31:59 [INFO] ✅ Socket.io inizializzato
+2026-05-07 14:31:59 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-07 14:32:00 [INFO] ✅ PostgreSQL connesso — 2026-05-07 14:32:00.064233+02
+2026-05-07 14:32:00 [INFO] ✅ Redis connesso
+2026-05-07 14:32:00 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-07 14:32:00 [INFO] 🌍 Ambiente: production
+2026-05-07 14:32:00 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-07 14:32:00 [INFO] 🔌 Socket.io attivo
+2026-05-07 14:37:39 [INFO] ✅ Socket.io inizializzato
+2026-05-07 14:37:39 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-07 14:37:39 [INFO] ✅ PostgreSQL connesso — 2026-05-07 14:37:39.632304+02
+2026-05-07 14:37:39 [INFO] ✅ Redis connesso
+2026-05-07 14:37:39 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-07 14:37:39 [INFO] 🌍 Ambiente: production
+2026-05-07 14:37:39 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-07 14:37:39 [INFO] 🔌 Socket.io attivo
+2026-05-07 15:06:50 [INFO] ✅ Socket.io inizializzato
+2026-05-07 15:06:50 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-07 15:06:50 [INFO] ✅ PostgreSQL connesso — 2026-05-07 15:06:50.742259+02
+2026-05-07 15:06:50 [INFO] ✅ Redis connesso
+2026-05-07 15:06:50 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-07 15:06:50 [INFO] 🌍 Ambiente: production
+2026-05-07 15:06:50 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-07 15:06:50 [INFO] 🔌 Socket.io attivo
+2026-05-07 16:46:18 [INFO] ✅ Socket.io inizializzato
+2026-05-07 16:46:18 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-07 16:46:18 [INFO] ✅ PostgreSQL connesso — 2026-05-07 16:46:18.704442+02
+2026-05-07 16:46:18 [INFO] ✅ Redis connesso
+2026-05-07 16:46:18 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-07 16:46:18 [INFO] 🌍 Ambiente: production
+2026-05-07 16:46:18 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-07 16:46:18 [INFO] 🔌 Socket.io attivo
+2026-05-07 16:56:41 [INFO] ✅ Socket.io inizializzato
+2026-05-07 16:56:41 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-07 16:56:41 [INFO] ✅ PostgreSQL connesso — 2026-05-07 16:56:41.59041+02
+2026-05-07 16:56:41 [INFO] ✅ Redis connesso
+2026-05-07 16:56:41 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-07 16:56:41 [INFO] 🌍 Ambiente: production
+2026-05-07 16:56:41 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-07 16:56:41 [INFO] 🔌 Socket.io attivo
+2026-05-07 17:22:27 [INFO] ✅ Socket.io inizializzato
+2026-05-07 17:22:27 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-07 17:22:27 [INFO] ✅ PostgreSQL connesso — 2026-05-07 17:22:27.537224+02
+2026-05-07 17:22:27 [INFO] ✅ Redis connesso
+2026-05-07 17:22:27 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-07 17:22:27 [INFO] 🌍 Ambiente: production
+2026-05-07 17:22:27 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-07 17:22:27 [INFO] 🔌 Socket.io attivo
+2026-05-07 17:25:55 [INFO] ✅ Socket.io inizializzato
+2026-05-07 17:25:55 [INFO] 🍕 Avvio PizzaZen Backend...
+2026-05-07 17:25:55 [INFO] ✅ PostgreSQL connesso — 2026-05-07 17:25:55.489471+02
+2026-05-07 17:25:55 [INFO] ✅ Redis connesso
+2026-05-07 17:25:55 [INFO] ✅ Server in ascolto su porta 3000
+2026-05-07 17:25:55 [INFO] 🌍 Ambiente: production
+2026-05-07 17:25:55 [INFO] 📡 Health check: http://localhost:3000/health
+2026-05-07 17:25:55 [INFO] 🔌 Socket.io attivo
