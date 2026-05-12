@@ -17,3 +17,6 @@ router.use('/admin/pizzerie/:pizzeriaId/utenti',
 );
 
 module.exports = router;
+
+// Ping — health check pubblico via Nginx
+router.get('/ping', (req, res) => res.json({ ok: true }));

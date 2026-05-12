@@ -14,13 +14,14 @@ router.get('/', async (req, res) => {
   try {
     const baseUrl = process.env.BASE_URL || 'http://localhost:3000'
     const result = await db.query(
-      `SELECT id, descrizione, categoria, icona_url, prezzo, nota, allergeni, attivo, created_at
+      `SELECT id, descrizione, categoria, icona_url, immagine_pizza_url, prezzo, nota, allergeni, attivo, created_at
        FROM ingredienti_default
        ORDER BY categoria ASC, descrizione ASC`
     );
     const rows = result.rows.map(r => ({
       ...r,
-      icona_url: r.icona_url ? `${baseUrl}/storage/${r.icona_url}` : null
+      icona_url: r.icona_url ? `${baseUrl}/storage/${r.icona_url}` : null,
+      immagine_pizza_url: r.immagine_pizza_url ? `${baseUrl}/storage/${r.immagine_pizza_url}` : null,
     }))
     return ok(res, rows);
   } catch (err) {
@@ -139,6 +140,72 @@ router.post('/:id/icona',
       }, 'Icona aggiornata');
     } catch (err) {
       logger.error('POST icona ingrediente default:', err);
+      return serverError(res);
+    }
+  }
+);
+
+// ─── POST /admin/ingredienti/:id/sync ────────────────────────
+// Propaga i campi (tranne prezzo) a tutte le pizzerie che hanno questo ingrediente default
+router.post('/:id/sync', [
+  param('id').isInt({ min: 1 }).toInt(),
+  validate
+], async (req, res) => {
+  try {
+    const result = await db.query(
+      `UPDATE ingredienti i
+       SET
+         descrizione        = d.descrizione,
+         icona_url          = d.icona_url,
+         immagine_pizza_url = d.immagine_pizza_url,
+         nota               = d.nota,
+         allergeni          = d.allergeni,
+         categoria          = d.categoria
+       FROM ingredienti_default d
+       WHERE i.ingrediente_default_id = d.id
+         AND d.id = $1
+       RETURNING i.id`,
+      [req.params.id]
+    );
+    return ok(res, { aggiornati: result.rowCount }, `Sincronizzati ${result.rowCount} ingredienti`);
+  } catch (err) {
+    logger.error('POST sync ingrediente default:', err);
+    return serverError(res);
+  }
+});
+
+// ─── POST /admin/ingredienti/:id/immagine-pizza ───────────────
+router.post('/:id/immagine-pizza',
+  param('id').isInt({ min: 1 }).toInt(),
+  upload.single('immagine'),
+  handleUploadError,
+  async (req, res) => {
+    try {
+      if (!req.file) return badRequest(res, 'File non ricevuto');
+
+      const existing = await db.query(
+        'SELECT id, immagine_pizza_url FROM ingredienti_default WHERE id = $1',
+        [req.params.id]
+      );
+      if (!existing.rows[0]) return notFound(res, 'Ingrediente non trovato');
+
+      if (existing.rows[0].immagine_pizza_url) {
+        storage.deleteFile(existing.rows[0].immagine_pizza_url);
+      }
+
+      const relativePath = await storage.savePizzaIngredientImage(
+        req.file.buffer, req.params.id, true
+      );
+
+      await db.query(
+        'UPDATE ingredienti_default SET immagine_pizza_url = $1 WHERE id = $2',
+        [relativePath, req.params.id]
+      );
+
+      const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
+      return ok(res, { immagine_pizza_url: `${baseUrl}/storage/${relativePath}` }, 'Immagine pizza aggiornata');
+    } catch (err) {
+      logger.error('POST immagine-pizza ingrediente default:', err);
       return serverError(res);
     }
   }

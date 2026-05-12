@@ -176,19 +176,22 @@ router.get('/articoli', async (req, res) => {
     const result = await db.queryRLS(pizzeriaId,
       `SELECT
          ma.id, ma.categoria_id, c.nome AS categoria_nome,
-         ma.nome, ma.icona_url, ma.prezzo,
+         ma.nome, ma.icona_url, ma.immagine_generata_url, ma.prezzo,
          ma.allergeni_extra, ma.note, ma.ordine,
          ma.non_disponibile, ma.non_in_uso,
          ma.created_at, ma.updated_at,
-         -- Ingredienti come array JSON
+         -- Ingredienti come array JSON ordinati
          COALESCE(
            json_agg(
              json_build_object(
                'id', i.id,
                'descrizione', i.descrizione,
                'prezzo', i.prezzo,
-               'allergeni', i.allergeni
-             )
+               'allergeni', i.allergeni,
+               'categoria', i.categoria,
+               'icona_url', i.icona_url,
+               'immagine_pizza_url', i.immagine_pizza_url
+             ) ORDER BY mai.ordine
            ) FILTER (WHERE i.id IS NOT NULL),
            '[]'
          ) AS ingredienti,
@@ -204,7 +207,16 @@ router.get('/articoli', async (req, res) => {
       params
     );
 
-    return ok(res, result.rows);
+    const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
+    const rows = result.rows.map(r => ({
+      ...r,
+      ingredienti: (r.ingredienti || []).map(i => ({
+        ...i,
+        immagine_pizza_url: i.immagine_pizza_url ? `${baseUrl}/storage/${i.immagine_pizza_url}` : null,
+        icona_url: i.icona_url ? `${baseUrl}/storage/${i.icona_url}` : null,
+      })),
+    }));
+    return ok(res, rows);
   } catch (err) {
     logger.error('GET articoli menu:', err);
     return serverError(res);
@@ -279,12 +291,12 @@ router.post('/articoli', requireGestioneMenu, [
     );
     const articolo = artRes.rows[0];
 
-    // Associa ingredienti
-    for (const ingId of ingredienti_ids) {
+    // Associa ingredienti con ordine
+    for (let idx = 0; idx < ingredienti_ids.length; idx++) {
       await client.query(
-        `INSERT INTO menu_articoli_ingredienti (articolo_id, ingrediente_id)
-         VALUES ($1, $2) ON CONFLICT DO NOTHING`,
-        [articolo.id, ingId]
+        `INSERT INTO menu_articoli_ingredienti (articolo_id, ingrediente_id, ordine)
+         VALUES ($1, $2, $3) ON CONFLICT DO NOTHING`,
+        [articolo.id, ingredienti_ids[idx], idx]
       );
     }
 
@@ -324,6 +336,7 @@ router.put('/articoli/:id', requireGestioneMenu, [
     const {
       categoria_id, nome, icona_url, prezzo,
       allergeni_extra, note, ordine,
+      non_in_uso,
       ingredienti_ids
     } = req.body;
 
@@ -336,11 +349,13 @@ router.put('/articoli/:id', requireGestioneMenu, [
          prezzo          = COALESCE($4, prezzo),
          allergeni_extra = COALESCE($5, allergeni_extra),
          note            = COALESCE($6, note),
-         ordine          = COALESCE($7, ordine)
-       WHERE id = $8 AND pizzeria_id = $9
+         ordine          = COALESCE($7, ordine),
+         non_in_uso      = CASE WHEN $8::boolean IS NOT NULL THEN $8 ELSE non_in_uso END
+       WHERE id = $9 AND pizzeria_id = $10
        RETURNING id`,
       [categoria_id, nome, icona_url, prezzo,
        allergeni_extra, note, ordine,
+       non_in_uso ?? null,
        req.params.id, pizzeriaId]
     );
     if (!result.rows[0]) {
@@ -354,11 +369,11 @@ router.put('/articoli/:id', requireGestioneMenu, [
         'DELETE FROM menu_articoli_ingredienti WHERE articolo_id = $1',
         [req.params.id]
       );
-      for (const ingId of ingredienti_ids) {
+      for (let idx = 0; idx < ingredienti_ids.length; idx++) {
         await client.query(
-          `INSERT INTO menu_articoli_ingredienti (articolo_id, ingrediente_id)
-           VALUES ($1, $2) ON CONFLICT DO NOTHING`,
-          [req.params.id, ingId]
+          `INSERT INTO menu_articoli_ingredienti (articolo_id, ingrediente_id, ordine)
+           VALUES ($1, $2, $3) ON CONFLICT DO NOTHING`,
+          [req.params.id, ingredienti_ids[idx], idx]
         );
       }
     }
@@ -427,6 +442,45 @@ router.delete('/articoli/:id', requireGestioneMenu, [
     return serverError(res);
   }
 });
+
+// ─── POST /pizzeria/menu/articoli/:id/immagine-generata ──────
+// Salva il canvas PNG esportato dal wizard come immagine composita
+router.post('/articoli/:id/immagine-generata',
+  requireGestioneMenu,
+  upload.single('immagine'),
+  handleUploadError,
+  async (req, res) => {
+    try {
+      const pizzeriaId = req.utente.pizzeriaId;
+      if (!req.file) return badRequest(res, 'File non ricevuto');
+
+      const existing = await db.queryRLS(pizzeriaId,
+        'SELECT id, immagine_generata_url FROM menu_articoli WHERE id = $1 AND pizzeria_id = $2',
+        [req.params.id, pizzeriaId]
+      );
+      if (!existing.rows[0]) return notFound(res, 'Articolo non trovato');
+
+      if (existing.rows[0].immagine_generata_url) {
+        storage.deleteFile(existing.rows[0].immagine_generata_url);
+      }
+
+      const relativePath = await storage.savePizzaArticoloImage(
+        req.file.buffer, pizzeriaId, req.params.id
+      );
+
+      await db.queryRLS(pizzeriaId,
+        'UPDATE menu_articoli SET immagine_generata_url = $1 WHERE id = $2 AND pizzeria_id = $3',
+        [relativePath, req.params.id, pizzeriaId]
+      );
+
+      const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
+      return ok(res, { immagine_generata_url: `${baseUrl}/storage/${relativePath}` }, 'Immagine generata salvata');
+    } catch (err) {
+      logger.error('POST immagine-generata articolo:', err);
+      return serverError(res);
+    }
+  }
+);
 
 // ─── POST /pizzeria/menu/articoli/:id/immagine ───────────────
 router.post('/articoli/:id/immagine',

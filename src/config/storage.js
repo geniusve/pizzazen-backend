@@ -86,6 +86,46 @@ const saveIngredienteIcon = async (buffer, ingredienteId, isDefault = false) => 
 };
 
 /**
+ * Salva l'immagine pizza di un ingrediente come PNG 500×500 con alpha channel
+ * @param {Buffer} buffer
+ * @param {number} ingredienteId
+ * @param {boolean} isDefault  - true = ingredienti_default, false = ingredienti pizzeria
+ * @param {number|null} pizzeriaId - richiesto se isDefault=false
+ */
+const savePizzaIngredientImage = async (buffer, ingredienteId, isDefault = true, pizzeriaId = null) => {
+  const subPath = isDefault
+    ? `defaults/ingredienti/pizza/${ingredienteId}.png`
+    : `pizzerie/${pizzeriaId}/ingredienti/pizza/${ingredienteId}.png`;
+
+  const fullPath = path.join(STORAGE_PATH, subPath);
+  ensureDir(path.dirname(fullPath));
+
+  await sharp(buffer)
+    .resize(500, 500, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+    .png()
+    .toFile(fullPath);
+
+  return subPath;
+};
+
+/**
+ * Salva l'immagine composita generata dal wizard per un articolo del menu
+ * Output: PNG 500×500 con alpha channel
+ */
+const savePizzaArticoloImage = async (buffer, pizzeriaId, articoloId) => {
+  const subPath = `pizzerie/${pizzeriaId}/articoli/pizza/${articoloId}.png`;
+  const fullPath = path.join(STORAGE_PATH, subPath);
+  ensureDir(path.dirname(fullPath));
+
+  await sharp(buffer)
+    .resize(500, 500, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+    .png()
+    .toFile(fullPath);
+
+  return subPath;
+};
+
+/**
  * Elimina un file dallo storage
  */
 const deleteFile = (relativePath) => {
@@ -124,6 +164,8 @@ module.exports = {
   saveMenuImage,
   saveCategoriaIcon,
   saveIngredienteIcon,
+  savePizzaIngredientImage,
+  savePizzaArticoloImage,
   deleteFile,
   buildUrl,
   getImageUrl,

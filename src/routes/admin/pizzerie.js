@@ -123,8 +123,8 @@ router.post('/', [
     const pizzeria = pizzeriaRes.rows[0];
 
     await client.query(
-      `INSERT INTO ingredienti (pizzeria_id, ingrediente_default_id, descrizione, icona_url, prezzo, nota, allergeni)
-       SELECT $1, id, descrizione, icona_url, prezzo, nota, allergeni FROM ingredienti_default WHERE attivo = true`,
+      `INSERT INTO ingredienti (pizzeria_id, ingrediente_default_id, descrizione, icona_url, immagine_pizza_url, prezzo, nota, allergeni, categoria)
+       SELECT $1, id, descrizione, icona_url, immagine_pizza_url, prezzo, nota, allergeni, categoria FROM ingredienti_default WHERE attivo = true`,
       [pizzeria.id]
     );
 
