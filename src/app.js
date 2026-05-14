@@ -82,7 +82,7 @@ app.use('/api/v1', routes);
 app.get('/health', (req, res) => {
   res.json({
     ok:          true,
-    servizio:    'PizzaZen Backend',
+    servizio:    'PizzaPax Backend',
     versione:    '1.0.0',
     ambiente:    process.env.NODE_ENV,
     timestamp:   new Date().toISOString(),
@@ -114,7 +114,7 @@ app.use((err, req, res, next) => {
 const PORT = parseInt(process.env.PORT) || 3000;
 
 const start = async () => {
-  logger.info('🍕 Avvio PizzaZen Backend...');
+  logger.info('🍕 Avvio PizzaPax Backend...');
 
   // Connessione database
   const dbOk = await testConnection();

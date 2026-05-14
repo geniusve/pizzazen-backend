@@ -49,3 +49,8 @@ error: update or delete on table "ingredienti_default" violates foreign key cons
     at /opt/pizzazen-backend/node_modules/pg-pool/index.js:45:11
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async /opt/pizzazen-backend/src/routes/admin/ingredienti.js:87:20
+2026-05-13 13:01:05 [ERROR] POST admin/clienti: null value in column "codice_cliente" of relation "clienti" violates not-null constraint
+error: null value in column "codice_cliente" of relation "clienti" violates not-null constraint
+    at /opt/pizzazen-backend/node_modules/pg/lib/client.js:631:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /opt/pizzazen-backend/src/routes/admin/clienti.js:175:17

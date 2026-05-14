@@ -1,6 +1,6 @@
 /**
  * ═══════════════════════════════════════════════════════════════
- * MOTORE PROMOZIONI PIZZAZEN
+ * MOTORE PROMOZIONI PIZZAPAX
  * ═══════════════════════════════════════════════════════════════
  *
  * Una promozione è definita da una "regola" JSONB con questa struttura:

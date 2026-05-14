@@ -1,5 +1,5 @@
 {
-  "name": "pizzazen-backend",
+  "name": "pizzapax-backend",
   "version": "1.0.0",
   "description": "PizzaZen - Sistema gestione ordini pizzerie",
   "main": "src/app.js",
