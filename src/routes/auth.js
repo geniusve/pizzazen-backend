@@ -73,6 +73,7 @@ router.post('/login', [
         tipo:              utente.tipo,
         pizzeriaId:        utente.pizzeria_id,
         pizzeriaNome:      utente.pizzeria_nome,
+        pizzeriaSlug:      utente.slug,
         puoGestireMenu:    utente.puo_gestire_menu,
         puoGestireClienti: utente.puo_gestire_clienti,
         puoVedereStats:    utente.puo_vedere_stats,

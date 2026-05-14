@@ -45,7 +45,7 @@ router.get('/', [
     const result = await db.query(
       `SELECT c.id, c.nome, c.cognome, c.cellulare, c.telefono,
               c.email, c.via, c.numero_civico, c.cap, c.citta,
-              c.whatsapp_abilitato, c.tipo_inserimento,
+              c.whatsapp_abilitato, c.tipo_inserimento, c.codice_cliente,
               c.created_at, cp.data_primo_ordine,
               COUNT(o.id) AS totale_ordini
        FROM clienti c
@@ -82,7 +82,10 @@ router.get('/:id', [
     const pizzeriaId = req.utente.pizzeriaId;
 
     const cliente = await db.query(
-      `SELECT c.*, cp.data_primo_ordine
+      `SELECT c.*, cp.data_primo_ordine,
+              (SELECT COUNT(*) FROM ordini o
+               WHERE o.cliente_id = c.id AND o.pizzeria_id = $2 AND o.stato != 'annullato'
+              ) AS totale_ordini
        FROM clienti c
        JOIN clienti_pizzerie cp ON cp.cliente_id = c.id
        WHERE c.id = $1 AND cp.pizzeria_id = $2`,

@@ -6,6 +6,7 @@ router.use(requireAdmin);
 
 router.use('/pizzerie', require('./pizzerie'));
 router.use('/ingredienti', require('./ingredienti'));
+router.use('/clienti', require('./clienti'));
 
 // Utenti montati separatamente con mergeParams sul router principale
 module.exports = router;
